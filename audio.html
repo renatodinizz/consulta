@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagem/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <h1>Trabalhando com audios</h1>
+        <h2>Inserir audio</h2>
+        <p>Para inserir audio usamos o comando &ltaudio&gt <br>Dentro da tag audio insira o comando <strong>controls</strong> para poder controlar o arquivo dentro da página. <br>Os formatos aceitos pelos navegadores são MP3, WAV e OGG</p>
+        <audio src="midia/boombapflick.mp3" controls></audio>
+        <h2>Inserir vários formatos</h2>
+        <p>Aprendendo a inserir audio parecido com o comando <strong>IF</strong> em JavaScript.</p>
+        <p>Usamos o comando <strong>&ltaudio&gt</strong> e do comando <strong>&ltaudio&gt</strong> usamos o comando <strong>&ltsource:src&gt</strong><br><em>Obs: Usa-se o type audio/mpeg para aquivos em MP3 <br> O parâmetro Preload éa forma como o arquivo vai carregar na página (recomanda usar o parâmetro <strong>metadata</strong>) <br>Pode-se usar o parâmetro <strong>loop</strong> para repetir o arquivo</em></p>
+        <audio preload="metadata" controls loop>
+            <source src="midia/boombapflick.mp3" type="audio/mpeg">
+            <source src="midia/boombapflick.ogg" type="audio/ogg">
+            <source src="midia/boombapflick.wav" type="audio/wav">
+            <p>Se nenhum desse aquivos forem reproduzidos, por favor mostrar esse parágrafo!</p>
+        </audio>
+        <h2>Downlaod</h2>
+        <p>Para fazer o download de um arquivo</p>
+        <p>Vamos tentar de duas maneiras uma direto pelo pdf e outra zipada</p>
+        <p>Para fazer o download do PDF clique <a href="midia/Currículo Renato Diniz.pdf" download="midia/Currículo Renato Diniz.pdf" target="_blank" type="aplication/pdf">aqui</a><br><em>Obs: O dowload não é feito direto e sim abre uma janela para visualização</em></p>
+        <p>Para fazer o download do PDF zipado clique <a href="midia/Currículo Renato Diniz.zip" download="midia/Currículo Renato Diniz.zip" type="aplication/zip">aqui</a></p>
+    </main>
+    <h3>Página principal!</h3>
+    <a href="index.html"><img src="imagem/home.png" alt="home"></a>
+    
+</body>
+</html>

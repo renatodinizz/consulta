@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagens</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagem/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <h1>Trabalhando com imagens</h1>
+        <h2>Inserir um ícone</h2>
+        <p>Para inserir um ícone utiliza-se o comando Link: favicon na área head <br><em>obs: A imagem do ícone deve estar no formato .ico <br> É recomendado que a imagem do ícone deve estar renomeada como: <strong>favicon</strong></em></p>
+        <h2>Inserir uma imagem</h2>
+        <p>Para inserir uma imagem utiliza-se o comando &ltimg&gt <br>Para adicionar uma imagem da internet basta copiar o link da imagem e copia-lo no src do comando.</p>
+        <img src="imagem/html-logo.png" alt="html-logo">
+        <img src="imagem/css-logo.png" alt="css-logo">
+        <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/javascript-2752148-2284965.png?f=webp&w=256" alt="js-logo"> <br>
+        <h2>Imagem flexivél</h2>
+        <p>Vamos aprender como colocar uma imagem flexivél para diferentes tipos de telas, a medida que ampliar a janela a imagem vai se adaptar!</p>
+        <p>Priemiro usamos o comando <strong>&ltpicture&gt</strong><br>Dentro do comando <strong>&ltpicture&gt</strong> usamos o comando <strong>&ltsource:media:type&gt</strong> <br>Mude o parâmetro de <strong>min</strong> para <strong>max</strong>. <br>Esse comando é parecido com o comando <strong>IF</strong> em JavaScript, com um detalhe que vai de baixo para cima.</div></p>
+        <picture>
+            <source media="(max-width: 650px)" srcset="imagem/paisagem-p.png" type="image/png">
+            <source media="(max-width: 800px)" srcset="imagem/paisagem-m.png" type="image/png">
+            <img src="imagem/paisagem-g.png" alt="paisagem-g">
+        </picture>
+    </main>
+    <h3>Página principal!</h3>
+    <a href="index.html"><img src="imagem/home.png" alt="home"></a>
+    
+</body>
+</html>

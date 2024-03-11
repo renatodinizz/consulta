@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilizar com CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagem/favicon.ico" type="image/x-icon">
+    <style>
+        div > p{
+            display: none;
+        }
+        div:hover > p{
+            display: block;
+            background-color: red;
+            color: #fff;
+            width: 300;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Estilizar com CSS</h1>
+        <h2>Alguns comandos</h2>
+        <p>Comandos que eu acho necessário</p>
+        <ul>
+            <li>padding - Controlam as margens</li>
+            <li>border-radius - Arredonda as margens</li>
+            <li>box-shadow - Constroi uma sombra nas bordas <em>Obs: se colocar os dois primeiros valores zerados a sombra fica dos dois lado</em></li>
+            <li>text-shadow - Constroi uma sombra no texto</li>
+            <li>text-indent - Para adicionar um espaço no parágrafo</li>
+            <li>font-style - Paracolocar em itálico</li>
+            <li>font-decoration: underline - Para subilinhar um texto</li>
+            <li>margin:auto - Para centralizar uma caixa</li>
+            <li>Transition-duration - Para evidenciar quando o mouse passar em cima <br>Ex: transition-duration: 0.5s;</li>
+            <li>line-hight - Para mudar o tamnho do espaçmento entre uma linha e outra</li>
+        </ul>
+        <h2>Degradê</h2>
+        <p>Para acrescentar um degradê use o comando <strong>background-image: linear-gradient()</strong><br>Obs: Dentro dos parênteses indique a direção do degradê como: <strong>to right, to left, to top, to bottom</strong> ou por graus como: <strong>90deg, 45deg</strong> <br>Obs: Depois da direção informe as cores que irão compor o degradê.</p>
+        <p>Algumas configurações para o degradê:
+            <ul>
+                <li>Para fixar o degradê - background-attachment: fixed;</li>
+                <li>Para fazer um degradê circular - radial-gradient: circle; (no lugar de linear-gradient).</li>
+                <li>Para dimensionar quanto de cada cor - Basta coloar a quantidade em porcentagem depois da cor.</li>
+            </ul>
+        </p>
+        <h2>Configurações globais da CSS</h2>
+        <p>Para configurar as CSS de maneira global utiliza-se o comando <strong>*</strong> <br>Ex: <pre>
+            * {
+                height: 100%;
+            }
+        </pre></p>
+        <h2>Importando fontes</h2>
+        <p>Para importar uma fonte, basta seguir os passos abaixo:
+            <ol>
+                <li>Baixar o arquivo nos formatos otf ou ttf</li>
+                <li>Colar o arquivo da fonte em uma pasta chamada <strong>fonts.</strong></li>
+                <li>Em <strong>style</strong> use o comando @font-face</li>
+                <li>Em url insira o nome do arquivo, e em format insira o tipo do formato que podem ser:</li>
+                <ul type="square">
+                    <li>opentype (otf)</li>
+                    <li>truetype (ttf)</li>
+                    <li>embedded-opentype</li>
+                    <li>truetype-att (Apple Advanced Typography)</li>
+                    <li>svg</li>
+                </ul>
+                
+            </ol>
+        </p>
+        <h2>Configurações de fontes</h2>
+        <p>Para o tamanho das fontes usamos as medidas <strong>em</strong> ou <strong>px</strong> <br>Geralmente o tamanho padrão da fonte é de 1em ou 16px;</p>
+        <p><strong>Font weight - </strong>É o peso da fonte, como se fosse um negrito <br>Para o peso da fonte podemos usar: <strong>lighter, normal, bold ou bolder</strong> ou podemos identenficar por números que vão do <strong>100 ao 900</strong>.</p>
+        <h2>Shorthands fonts</h2>
+        <p>Para simplificar os comandos podemos utilizar a forma shorthand. <br>Ao invés de utilizar esse código: <br><pre>
+            h1 {
+                font-family: 'Work Sans', sans-serif;
+                font-weight: bolder;
+                font-size: 3em;
+                font-style: italic;
+            }
+        </pre>
+        Podemos somente usar esse comando <br>font: italic bolder 3em 'Work Sans', sans-serif; <br>Mas necessariamente precisar ser nessa ordem: font-style, font-weight, font-size e font-family.
+        </p>
+        <h2>Texto oculto</h2>
+        <div id="primeiro">
+            Passe o mouse aqui 
+            <p>Texto escondido!!!</p>
+        </div>
+        <p>Difícil de explicar - melhor ver o código.</p>
+        <h2>Estilizando links</h2>
+        <ul>
+            <li>text-decoration: none; - Para retirar o subilinhado de um link</li>
+            <li>a:visited {color:red} - Para escolher a cor do link depois de visitado</li>
+            <li>a:hover {color:black} - Para escolher a cor do link quando o mouse passar por cima</li>
+            <li>a:hover {text-decoration: underline} - Para adicionar um subilinhadon ao link quando o mouse passar por cima</li>
+            <li>a:active {color:yellow} - Para adicionar uma cor assim que clicar no link</li>
+        </ul>
+        <h2>Chamando no CSS</h2>
+        <ul>
+            <li># = id</li>
+            <li>. = Classe</li>
+            <li>: = Pseudo Class</li>
+            <li>:: = Pseudo Element</li>
+            <li>> = Children</li>
+        </ul>
+        <h2>Variavéis com CSS</h2>
+        <ul>
+            <li>Crie a marcação <strong>:root{}</strong></li>
+            <li>Dentro das chaves insira dois traços + o nome da variavél + :</li>
+            <li>Insira o valor da variavél + ;</li>           
+        </ul>
+        <p>Ex1: --cor3: #2fa866; <br>Ex2: --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;</p>
+        <p>Para chamar a variavél, use a marcação desejada e depois aperte <strong>Ctrl + Espaço</strong> desça a barra de rolagem por completo e no final estará a variavél criada ou chame a variavél como no exemplo abaixo: <br>Ex: font-family: var(--fonte-padrao);</p>
+        <h2>Responsividade</h2>
+        <p>Para deixar um site responsivo, isso é, adaptado a diferentes tamanhos, sigua os passos abaixo:</p>
+        <ul>
+            <li>Em CSS na tag <strong>main</strong> use os comandos abaixo</li>
+            <li>min-width: 320px; (suguerido usar esse tamanho)</li>
+            <li>max-width: 800px; (suguerido usar esse tamanho)</li>           
+        </ul>
+        <p>Assim to texto irá fica responsivo, para as imagens siga as instruções abaixo:</p>
+        <ul>
+            <li>Em CSS chame a imagem desejado e coloque o comando <strong>width: 100%;</strong></li>
+            <li>Crie uma tag <strong>Picture</strong></li>
+            <li>Dentro da tag <strong>Picture</strong> insira uma imagem com o comando <strong>img</strong></li>
+            <li>Na linha em cima da imagem use o comando <strong>Source:media</strong></li>
+            <li>Mude o paramêtro de min-width para <strong>max-width</strong> e coloque a largura desejada</li>
+            <li>Insira manualmente a outra imagem que irá fazer a responsividade</li>
+        </ul>
+        <p>Como no exemplo abaixo.</p>
+        <img src="imagem/responsividade.png" alt="imagem do codigo responsividade">
+        <h2>Listas</h2>
+        <p>Usei o código <strong>'\2714\00A0\00A0'</strong> (Que foi pego do emoji pedia) para adicionar um check nos marcadores e o outro número para adicionar espaço</p>
+        <p>Usei o código <strong>list-style-position: inside;</strong> para a lista ficar dentro do conteúdo</p>
+        <p>Usei o comando columns para dizer quantas colunas eu queria.</p>
+        <h2>Responsividade com videos</h2>
+        <p>É difícil de explicar mas qualquer coisa, dê uma olhada no código, mas vou me esforçar ao máximo para deixar bem claro. <br>Para deixar um video responsivo siga os passos abaixo:</p>
+        <ul>
+            <li>Insira o video em uma <strong>div</strong> e dê uma classe para ele</li>
+            <li>Em CSS crie um comando para chamar a div</li>
+            <li>Insira o comando <strong>position: relative;</strong></li>
+            <li>Insira um <strong>padding-bottom: 59% </strong>(valor testado) <br><em>Obs: O vídeo vai ficar com barras pretas nas laterias isso pode ser ajustado com o comando <strong>paddin-bottom</strong></em></li>          
+                        
+        </ul>
+        <ul>
+            <li>Crie um comando chamando o iframe do video</li>
+            <li>Ex: div.video > iframe{}</li>
+            <li>Insira o comando <strong>position: absolute;</strong></li>
+            <li>Insira o comando <strong>top: 5%;</strong></li>
+            <li>Insira o comando <strong>left: 5%;</strong></li>
+            <li>Insira o comando <strong>width: 90%; </strong>(Só é possivél pois estsmao trabalhando em top e left com porcentagem)</li>
+            <li>Insira o comando <strong>height: 90%; </strong>(Só é possivél pois estsmao trabalhando em top e left com porcentagem)</li>
+        </ul>
+
+    </main>
+    <h3>Página principal!</h3>
+    <a href="index.html"><img src="imagem/home.png" alt="home"></a>
+    
+</body>
+</html>

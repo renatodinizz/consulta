@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagem/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <h1>Trabalhando com Vídeos</h1>
+        <h2>Video inserido no próprio servidor</h2>
+        <p>Vamos usar o comando <strong>&ltVideo&gt</strong> e dentro do comando <strong>&ltVideo&gt</strong> vamos usar o comando <strong>&ltSource:SRC&gt</strong> <br>Esse comando é parecido com o <strong>IF</strong> em JavaScript. <br><em>Obs: O comando <strong>poster</strong> é utilizado para inserir uma thumbnail, <br>Obs: O comando <strong>controls</strong> é utilizado para inserir controle no vídeo.</em></p>    
+   
+        <video width="700" controls poster="imagem/imagem-titulo.png">
+            <source src="midia/Meu-Video.mp4" type="video/mp4">
+            <source src="midia/Meu-Video.webm" type="video/webm">
+            <source src="midia/Meu-Video.ogv" type="video/ogv">
+            <p>Seu navegador não é compatível com reprodução de video.</p>
+        </video>
+        <h2>Video inserido de outro servidor</h2>
+        <p>Para inserir um video do youtube vamos seguir alguns passos...</p>
+        <ol>
+            <li>Entre em <a href="https://www.youtube.com/" target="_blank">youtube.com</a></li>
+            <li>Escolha o video que deseja</li>
+            <li>Clique em compartilhar</li>
+            <li>Clique em incorporar</li>
+            <li>Copie o código</li>
+            <li>Cole o código onde desejar</li>
+        </ol>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/a-M3x-eZpV8?si=wOIHHQCXw2l_ynMv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </main>
+    <h3>Página principal!</h3>
+    <a href="index.html"><img src="imagem/home.png" alt="home"></a>
+    
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edição de textos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagem/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <h1>Trabalhando com edição de textos</h1>
+        <h2>Títulos</h2>
+        <p>Podemos inserir títulos com o comando H + algum número!</p>
+        <p>A ordem dos títulos vão do &lth1&gt ao &lth6&gt</p>
+        <h2>Parágrafos</h2>
+        <p>Para criar um parágrafo basta usar o comando &ltp&gt</p>
+        <p>Pode-se criar um parágrafo de exemplo usando o comando <strong>"lorem"</strong><br>ex: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio libero, impedit ducimus voluptate repellendus nemo corrupti velit reprehenderit. Unde vel reprehenderit, ab accusamus temporibus expedita commodi consequuntur ea numquam voluptas.</p>
+        <p>Para quebrar uma linha utilize o comando &ltbr&gt</p>
+        <P>Para inserir uma linha horizontal utilize o comando &lthr&gt</P><hr>
+        <h2>Negrito</h2>
+        <p>Com o comando &ltStrong&gt o texto fica em negrito - <strong>Desta forma</strong></p>
+        <h2>Itálico</h2>
+        <p>Com o comando &ltem&gt o texto fica em itálico - <em>Desta forma</em></p>
+        <h2>Marcação</h2>
+        <p>Com o comando &ltMark&gt o texto fica marcado - <mark>Desta forma</mark><br>Com CSS você pode escolher a cor da marcação.</p>
+        <h2>Diminuir fonte</h2>
+        <p>Com o comando &ltSmall&gt o texto fica pequeno - <small>Desta forma</small></p>
+        <h2>Riscar o texto</h2>
+        <p>Com o comando &ltDel&gt o texto fica ricado - <del>Desta forma</del></p>
+        <h2>Subilinhar texto</h2>
+        <p>Com o comando &ltIns&gt o texto fica subilinhado - <ins>Desta forma</ins></p>
+        <h2>Texto invertido</h2>
+        <p>Com o comando &ltbdo&gt o texto fica invertido - <bdo dir="rtl">Desta forma</bdo><br>Precisa colocar o comando <abbr title="right to left">rtl</abbr> no campo dir para funcionar.</p>
+        <h2>Sobrescrever texto</h2>
+        <p>Com o comando &ltSup&gt o texto fica sobrescrito - ex: X<sup>9</sup>+32=100 <br>Aqui o número 9 está sobrescrito.</p>
+        <h2>Subescrever texto</h2>
+        <p>Com o comando &ltSub&gt o texto fica subescrito - ex: H<sub>2</sub>O <br>Aqui o número 2 está subescrito.</p>        
+        <h2>Monoespaçar texto</h2>
+        <p>Com o comando &ltCode&gt o texto fica monoespaçado. <br>Todos os caracteries irão ter o mesmo espaço.</p>
+        <p>Exemplo de um texto sem monoespaçamento: document.getElement.id</p>
+        <p><code>Exemplo de um texto com monoespaçamento: document.getElement.id</code></p>
+        <em>
+            <p>Não sei o que aconteceu mas não ficou claro o comando, acho que foi a fonte que mudou!</p>
+        </em>
+        <h2>Pre formatar como código</h2>
+        <p>Com o comando &ltPre&gt o texto fica pre formatado como no exemplo abaixo</p>
+        <p>Exemplo de texto sem a tag PRE</p>
+        <code>
+            num = int(imput("digite um número"))
+            if num % 2 == 0:
+              print(f "o número(num) é PAR")
+            else:
+              print(f "o número(num) é IMPAR")
+            print("fim do projeto")
+        </code><br>
+        <p>Exemplo de texto com a tag PRE</p>
+        <pre>
+            <code>
+                num = int(imput("digite um número"))
+                if num % 2 == 0:
+                    print(f "o número(num) é PAR")
+                else:
+                    print(f "o número(num) é IMPAR")
+                print("fim do projeto")
+            </code>
+        </pre>
+        <h2>Citações simples</h2>
+        <p>Com o comando &ltQ&gt o texto fica como uma citação. <br>Exemplo: O pai de um amigo meu já dizia: <q>O computador é um burro muito rápido</q></p>
+        <h2>Citações complexas</h2>
+        <p>Com o comando &ltblockcode&gt faz referência a uma grande citação. Dentro do comando existe um campo para colocar um link, o que ajuda os buscadores a saberem a referência que está sendo usada.</p>
+        <p>Segundo Chris Coremans, em seu livro:</p>
+        <blockcode cite="https://www.google.com.br/books/edition/HTML_A_Beginner_s_Tutorial/63AdCgAAQBAJ?hl=pt-BR&gbpv=1&dq=html&printsec=frontcover">To create HMTL documents you need is a text editor and to test them you need a web browser. All Windows or Mac computer come with a text editor and a browser.</blockcode>
+        <h2>Abreviações</h2>
+        <p>Com o comando &ltAbbr&gt exibe uma mensagem quando o cursor fica parado por cima da palavra.</p>
+        <p>Exemplo: Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>, estou adorando!</p>        
+        <h2>Lista Ordenada</h2>
+        <p>Com o comando &ltol&gt podemos criar uma lista ordenada. <br>Cada item da lista deve ser usada dentro do comando &ltli&gt <br>Pode usar diferentes tipos de caracteres como: 1, a, A, i, I <br>Pode usar no comando start em que posição deseja começar. <br>Exemplo:</p>
+        <ol type="I">
+            <li>levantar</li>
+            <li>escovar os dentes</li>
+            <li>vestir uma roupa</li>
+            <li>Ir para academia</li>
+            <li>Tomar banho</li>
+            <li>Estudar</li>            
+        </ol>        
+        <h2>Lista Desordenada</h2>
+        <p>Com o comando &ltul&gt podemos criar uma lista desordenada. <br>Cada item da lista deve ser usada dentro do comando &ltli&gt <br>Pode usar diferentes tipos de marcadores como: disc, circle, square <br>Exemplo:</p>
+        <ul type="square">
+            <li>Estudar</li>
+            <li>Treinar</li>
+            <li>Jogar basquete</li>
+            <li>Jiu-Jitsu</li>
+            <li>Relaxar</li>
+        </ul>
+        <h2>Lista dentro de lista</h2>
+        <p>Assim que podemos fazer índices.</p>
+        <ol>
+            <li>SNES</li>
+            <ul type="disc">
+                <li>Super Mario World</li>
+                <li>Donkey Kong</li>
+                <li>MortalKombat</li>
+             </ul>
+            <li>PlayStation</li>
+            <ul type="Square">
+                <li>Prince of Persia</li>
+                <li>Medal of Honor</li>
+                <li>Street Fight</li>
+            </ul>
+            <li>PlayStation2</li>
+            <ul type="circle">
+                <li>God of War</li>
+                <li>Need for Speed</li>
+                <li>Fifa</li>
+            </ul>
+        </ol>
+        <h2>Lista de definição</h2>
+        <dt>HTML</dt>
+        <dd>Linguagem de marcação para a criação de um site.</dd>
+        <dt>CSS</dt>
+        <dd>Linguagem de marcação para o design de um site.</dd>
+        <dt>JavaScript</dt>
+        <dd>Linguagem de programação para a interação de um site.</dd>
+       
+    </main>
+    <h3>Página principal!</h3>
+    <a href="index.html"><img src="imagem/home.png" alt="home"></a>
+    
+</body>
+</html>
