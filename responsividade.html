@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsividade</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagem/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <h1>Responsividade</h1>
+        <h2>Responsividade de imagens</h2>
+        <p>Para deixar um site responsivo, isso é, adaptado a diferentes tamanhos, sigua os passos abaixo:</p>
+        <ul>
+            <li>Em CSS na tag <strong>main</strong> use os comandos abaixo</li>
+            <li>min-width: 320px; (suguerido usar esse tamanho)</li>
+            <li>max-width: 800px; (suguerido usar esse tamanho)</li>           
+        </ul>
+        <p>Assim to texto irá fica responsivo, para as imagens siga as instruções abaixo:</p>
+        <ul>
+            <li>Em CSS chame a imagem desejado e coloque o comando <strong>width: 100%;</strong></li>
+            <li>Crie uma tag <strong>Picture</strong></li>
+            <li>Dentro da tag <strong>Picture</strong> insira uma imagem com o comando <strong>img</strong></li>
+            <li>Na linha em cima da imagem use o comando <strong>Source:media</strong></li>
+            <li>Mude o paramêtro de min-width para <strong>max-width</strong> e coloque a largura desejada</li>
+            <li>Insira manualmente a outra imagem que irá fazer a responsividade</li>
+        </ul>
+        <p>Como no exemplo abaixo.</p>
+        <img src="imagem/responsividade.png" alt="imagem do codigo responsividade">
+
+        <h2>Responsividade com videos</h2>
+        <p>É difícil de explicar mas qualquer coisa, dê uma olhada no código, mas vou me esforçar ao máximo para deixar bem claro. <br>Para deixar um video responsivo siga os passos abaixo:</p>
+        <ul>
+            <li>Insira o video em uma <strong>div</strong> e dê uma classe para ele</li>
+            <li>Em CSS crie um comando para chamar a div</li>
+            <li>Insira o comando <strong>position: relative;</strong></li>
+            <li>Insira um <strong>padding-bottom: 59% </strong>(valor testado) <br><em>Obs: O vídeo vai ficar com barras pretas nas laterias isso pode ser ajustado com o comando <strong>paddin-bottom</strong></em></li>          
+                        
+        </ul>
+        <ul>
+            <li>Crie um comando chamando o iframe do video</li>
+            <li>Ex: div.video > iframe{}</li>
+            <li>Insira o comando <strong>position: absolute;</strong></li>
+            <li>Insira o comando <strong>top: 5%;</strong></li>
+            <li>Insira o comando <strong>left: 5%;</strong></li>
+            <li>Insira o comando <strong>width: 90%; </strong>(Só é possivél pois estsmao trabalhando em top e left com porcentagem)</li>
+            <li>Insira o comando <strong>height: 90%; </strong>(Só é possivél pois estsmao trabalhando em top e left com porcentagem)</li>
+    </main>
+    <h3>Página principal!</h3>
+    <a href="index.html"><img src="imagem/home.png" alt="home"></a>    
+</body>
+</html>

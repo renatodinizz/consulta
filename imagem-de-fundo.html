@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem de fundo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagem/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <h1>Imagem de fundo</h1>
+        <h2>Inserindo imagem de fundo</h2>
+        <ul>
+            <li>Utiliza-se o comando <strong>background-image</strong></li>
+            <li>Com o parametro <strong>Url</strong></li>
+            <li>E coloca o caminho da imagem desejada</li>
+            <li>Ps: É recomendado sempre colocar uma cor no fundo mesmo quando for inserir uma imagem de fundo</li>          
+        </ul>
+        <h2>Posicionamento da origem de inicio da imagem</h2>
+        <p>Para posicionar o ponto de partida da imagem, podemos imaginar 3 colunas e 3 linhas <br>As colunas: <strong>Left, center e right</strong> <br>linhas: <strong>Top, center e bottom</strong></p>
+        <p>O comando a ser utilizado é o background-position <br>Ex: <strong>background-position: right center</strong>;</p>
+        <h2>Outros comandos para estilização</h2>
+        <p>Por padrão a imagem de fundo será repitida quando a tela for grande e para corrigir isso vamos usar o comando <strong>background-repeat</strong>. <br>Vamos usar os parametros a seguir para personalizar da melhor forma.</p>
+        <ul>
+            <li>repeat - Que já é o padrão</li>
+            <li>no-repeat - Para não repetir</li>
+            <li>repeat-y - Para repetir somente na coluna y</li>
+            <li>repeat-x - Para repetir somente na lina x</li>            
+        </ul>
+        <p>Para o tamanho utiliza-se o comando <strong>background-size</strong> e vamos ver alguns parametros para estilizar.</p>
+        <ul>
+            <li>800px - Pode ser usado o tamanho que desejar</li>
+            <li>100% - Vai ocupar toda a tela se a imagem for na dimensão da tela e a tela não tiver rolagem</li>
+            <li>contain - Faz a imagem ser 100% exibida mas deixa aquelas barras pretas para ajustar a imagem.</li>
+            <li>cover - Faz a imagem ser 100% exibida mesmo que para isso ele tenha que corta um pouco a imagem.</li>            
+        </ul>
+        <p>Para ajustar a imagem de fundo utiliza-se o comando <strong>background-attachment</strong> com os parametros</p>
+        <ul>
+            <li>scroll - Para a imagem rolar junto com o conteúdo</li>
+            <li>fixed - Para a imagem permanecer fixa.</li>
+        </ul>
+        <h2>Short hand</h2>
+        <p>Para a short hand podemos usar o comando <strong>background</strong> e inserir os valores na ordem a seguir.</p>
+        <ul>
+            <li>color</li>
+            <li>imagem</li>
+            <li>position</li>
+            <li>repeat</li>
+            <li>attachment</li>            
+        </ul>
+        <p>Ex: <strong>background: black url('imagem/wallpaper002.jpg') center center no-repeat fixed;</strong> <br>Obs: Não é possivél usar o background-size no short hand, deve se usar separado.</p>
+
+
+    </main>
+    <h3>Página principal!</h3>
+    <a href="index.html"><img src="imagem/home.png" alt="home"></a>    
+</body>
+</html>

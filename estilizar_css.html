@@ -111,47 +111,11 @@
         </ul>
         <p>Ex1: --cor3: #2fa866; <br>Ex2: --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;</p>
         <p>Para chamar a variavél, use a marcação desejada e depois aperte <strong>Ctrl + Espaço</strong> desça a barra de rolagem por completo e no final estará a variavél criada ou chame a variavél como no exemplo abaixo: <br>Ex: font-family: var(--fonte-padrao);</p>
-        <h2>Responsividade</h2>
-        <p>Para deixar um site responsivo, isso é, adaptado a diferentes tamanhos, sigua os passos abaixo:</p>
-        <ul>
-            <li>Em CSS na tag <strong>main</strong> use os comandos abaixo</li>
-            <li>min-width: 320px; (suguerido usar esse tamanho)</li>
-            <li>max-width: 800px; (suguerido usar esse tamanho)</li>           
-        </ul>
-        <p>Assim to texto irá fica responsivo, para as imagens siga as instruções abaixo:</p>
-        <ul>
-            <li>Em CSS chame a imagem desejado e coloque o comando <strong>width: 100%;</strong></li>
-            <li>Crie uma tag <strong>Picture</strong></li>
-            <li>Dentro da tag <strong>Picture</strong> insira uma imagem com o comando <strong>img</strong></li>
-            <li>Na linha em cima da imagem use o comando <strong>Source:media</strong></li>
-            <li>Mude o paramêtro de min-width para <strong>max-width</strong> e coloque a largura desejada</li>
-            <li>Insira manualmente a outra imagem que irá fazer a responsividade</li>
-        </ul>
-        <p>Como no exemplo abaixo.</p>
-        <img src="imagem/responsividade.png" alt="imagem do codigo responsividade">
         <h2>Listas</h2>
         <p>Usei o código <strong>'\2714\00A0\00A0'</strong> (Que foi pego do emoji pedia) para adicionar um check nos marcadores e o outro número para adicionar espaço</p>
         <p>Usei o código <strong>list-style-position: inside;</strong> para a lista ficar dentro do conteúdo</p>
-        <p>Usei o comando columns para dizer quantas colunas eu queria.</p>
-        <h2>Responsividade com videos</h2>
-        <p>É difícil de explicar mas qualquer coisa, dê uma olhada no código, mas vou me esforçar ao máximo para deixar bem claro. <br>Para deixar um video responsivo siga os passos abaixo:</p>
-        <ul>
-            <li>Insira o video em uma <strong>div</strong> e dê uma classe para ele</li>
-            <li>Em CSS crie um comando para chamar a div</li>
-            <li>Insira o comando <strong>position: relative;</strong></li>
-            <li>Insira um <strong>padding-bottom: 59% </strong>(valor testado) <br><em>Obs: O vídeo vai ficar com barras pretas nas laterias isso pode ser ajustado com o comando <strong>paddin-bottom</strong></em></li>          
-                        
-        </ul>
-        <ul>
-            <li>Crie um comando chamando o iframe do video</li>
-            <li>Ex: div.video > iframe{}</li>
-            <li>Insira o comando <strong>position: absolute;</strong></li>
-            <li>Insira o comando <strong>top: 5%;</strong></li>
-            <li>Insira o comando <strong>left: 5%;</strong></li>
-            <li>Insira o comando <strong>width: 90%; </strong>(Só é possivél pois estsmao trabalhando em top e left com porcentagem)</li>
-            <li>Insira o comando <strong>height: 90%; </strong>(Só é possivél pois estsmao trabalhando em top e left com porcentagem)</li>
-        </ul>
-
+        <p>Usei o comando <strong>columns</strong> para dizer quantas colunas eu queria.</p>
+        
     </main>
     <h3>Página principal!</h3>
     <a href="index.html"><img src="imagem/home.png" alt="home"></a>
