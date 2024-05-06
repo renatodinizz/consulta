@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagem/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <h1>Tabelas</h1>
+        <h2>Inserindo uma tabela simples</h2>
+        <p>Para inserir uma tabela utiliza-se o comando <strong>table</strong>. <br> Dentro de <strong>table</strong> utiliza-se o comando <strong>tr </strong>"table row" -  que é basicamente as linhas da tabela. <br>Dentro de <strong>tr </strong> vamos ter o comando <strong>td </strong>que são os conteúdos dentro da tabela. <br>Olhe dentro do código, mais fácil do que explicar. <br>A estilização da tabela eu fiz com <strong>CSS</strong>.</p>
+        
+        <table class="tabela1">
+                <tr>
+                    <td>A1</td>
+                    <td>B1</td>
+                    <td>C1</td>
+                </tr>
+                <tr>
+                    <td>A2</td>
+                    <td>B2</td>
+                    <td>C2</td>
+                </tr>
+                <tr>
+                    <td>A3</td>
+                    <td>B3</td>
+                    <td>C3</td>
+                </tr>
+                <tr>
+                    <td>A4</td>
+                    <td>B4</td>
+                    <td>C4</td>
+                </tr>
+        </table>
+        <p>Pode utilizar o comando <strong>vertical-align</strong> para centralizar verticalmente as propriedades com os paremetros: <strong>top, middle e bottom</strong></p>
+        
+        <h2>Anatomia para tabelas grandes</h2>
+        <p>Para se criar uma tabela grandes, vamos usar a seguinte anatomia.</p>
+        <pre id="grande">
+            <strong>
+                table <br>
+                    caption <br>
+                    thead
+                        tr, td, th <br>
+                    tbody
+                        tr, td, th <br>
+                    tfooter
+                        tr, td, th
+            </strong>
+        </pre>
+        <p>É importante colocar o parametro <strong>scope</strong> dentro dos títulos (th) para identificar como os dados devem seguir. <br>Usamos o parametro <strong>scope: "col"</strong> para indicar que os dados vão seguir a coluna. <br>Usamos o parametro <strong>scope: "row"</strong> para indicar que os dados vão seguir a linha <br>Usamos o parametro <strong>scope: "colgorup"</strong> para indicar que os dados a seguir terão conteúdo em mais de uma coluna. <br>Usamos o parametro <strong>scope: "rowgroup"</strong> para indicar que os dados a seguir terão conteúdo em mais de uma linha.</p>
+        <h2>Efeito Zebrado</h2>
+        <p>Para obter um efeito zebrado podemos usar os seguintes comandos em CSS.</p>
+        <p>tbody > tr:nth-child () {background: lightgray} <br> <br>Dentro do parenteses podemos colocar os seguintes parametros... <br><strong>n2-1</strong> ou <strong>odd</strong> - Para inserir a cor do background em todas as linhas ímpares <br><strong>n2</strong> ou <strong>even</strong> - Para inserir a cor do background em todas as linhas pares</p>
+        <h2>Fixar o Título</h2>
+        <p>Em Css vamos colocar os seguintes comandos.</p>
+        <p>Primeiro colocamos o <strong>position: relative;</strong> na tabela.</p>
+        <p>Depois inserimos o comando em um novo espaço. <br><pre>
+            <strong>thead > tr > th {
+                position: sticky;
+                top:-1px;
+                background-color: blue;
+            }</strong>
+        </pre></p>
+        <p><strong>position: sticky; </strong>- Serve para fixar o título. <br><strong>top:-1px; </strong>- Serve para orientar onde fixar o título. <br><strong>background-color: blue; </strong>- Serve para fixar a cor de fundo junto com o título (deve ser a mesma cor de fundo posto na tabela original).</p>
+        <h2>Mesclar celulas</h2>
+        <p>Para mesclar uma celula em colunas, utiliza-se o comando <strong>colspan="número de colunas que deseja mesclar"</strong> dentro do <strong>td</strong> desejado, como no exemplo abaixo. <br> <strong>td colspan="2"</strong></p>
+        <table class="tabela2">
+            <tr>
+                <td>A</td>
+                <td colspan="2">B</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>E</td>
+                <td>F</td>
+            </tr>
+            <tr>
+                <td>G</td>
+                <td>H</td>
+                <td>I</td>
+            </tr>
+            <tr>
+                <td>J</td>
+                <td>K</td>
+                <td>L</td>
+            </tr>
+        </table>
+        <p>Para mesclar uma celula em linhas, utiliza-se o comando <strong>rowspan="número de linhas que deseja mesclar"</strong> dentro do <strong>td</strong> desejado, como no exemplo abaixo. <br> <strong>td rowspan="2"</strong></p>
+        <table class="tabela2">
+            <tr>
+                <td>A</td>
+                <td>B</td>
+                <td rowspan="3">C</td>
+            </tr>
+            <tr>
+                <td rowspan="2">D</td>
+                <td>E</td>
+            </tr>
+            <tr>
+                <td>H</td>
+            </tr>
+            <tr>
+                <td>J</td>
+                <td>K</td>
+                <td>L</td>
+            </tr>
+        </table>
+        <h2>Destacar Colunas</h2>
+        <p>Para destacar uma coluna, usamos o comando <strong>colgroup</strong> e dentro de <strong>colgroup</strong> usamos o comando <strong>col,</strong> desse modo podemos usar uma class para destacar as colunas, como no exemplo abaixo.</p>
+        <img class="exemplo" src="imagem/colgroup.png" alt="comando col group">
+        <p>Nesse exemplo o comando <strong>span</strong> está indicando o número de colunas que vão ser destacada com class.</p>
+        <h2>Responsividade de Tabelas</h2>
+        <p>Para deixar o conteúdo do site fixo e somente a tabela com rolagem lateral, em CSS vamos usar o código.</p>
+        <img class="exemplo" src="imagem/responsividade-tabela.png" alt="responsividade de tabela">
+
+    </main>
+    <h3>Página principal!</h3>
+    <a href="index.html"><img src="imagem/home.png" alt="home"></a>
+</body>
+</html>

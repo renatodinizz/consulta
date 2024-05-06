@@ -38,3 +38,36 @@ p{
     font-weight: bolder;
     color: #24E087;
 }
+a.titulo{
+    text-decoration: none;
+}
+a.titulo:visited {
+    color: #E05D23;
+}
+a.titulo:hover {
+    color: #E05D23;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.377);
+}
+table.tabela1 {
+    width: 300px;
+    height: 250px;
+    border-collapse: collapse;  
+    text-align: center;        
+}
+td {
+    border: 1px solid black;
+    padding: 8px;
+    vertical-align: top;
+}
+table.tabela2 {
+    width: 300px;
+    height: 150px;
+    border-collapse: collapse;  
+    text-align: center;        
+}
+pre#grande {
+    text-transform: uppercase;
+}
+img.exemplo {
+    width: 500px;
+}
