@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagem/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <h1>Formulários</h1>
+        <h2>Formulários</h2>
+        <p>Criando um formulário simples.</p>        
+        <form action="cadastro.php">
+            <p><label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome">
+            </p>
+            <p><label for="sobrenome">Sobrenome:</label>
+                <input type="text" name="sobrenome" id="sobrenome">
+            </p>
+            <input type="submit" value="Enviar">
+        </form>
+        <p>Para se criar um formulário como esse exemplo usamos o comando <strong>form.</strong><br>Inserimos um parágrafo onde no exemplo foi escrito <strong>nome.</strong> <br>Depois inserimos o comando <strong>input:text</strong> para criar essa caixa, onde o texto pode ser escrito. <br> Para criar o botão usamos o comando <strong>input:submit </strong>e dentro do parametro <strong>value,</strong> colocamos o que vai estar escrito dentro do botão.</p>
+        <p>Podemos tirar o auto completar usando o parametro <strong>autocomplete='off'</strong> dentro da tag <strong>form.</strong></p>
+        <p>O parametro <strong>action</strong> serve para colocar o endereço onde os dados vão ser salvos, logo depois os dados serão enviados quando o botão de submit for utilizado.</p>
+        <h2>Relacionar</h2>
+        <p>Vamos aprender como podemos fazer para relacionar um parágrafo com uma caixa de texto (ex: Nome: > caixa de texto na frente de nome).</p>
+        <p>Primeiro passo, vamos envelopar o parágrafo, que no nosso caso é o parágrafo <strong>nome:</strong> <br> Vamos envelopar com o comando <strong>label</strong> <br> E no parametro <strong>for</strong> vamos colocar o <strong>id</strong> que colocamos no <strong>input</strong> relacionado.</p>
+        <p>Isso vai relacionar os dados para serem usados e salvos de maneira correta.</p>
+    </main>
+    <h3>Página principal!</h3>
+    <a href="index.html"><img src="imagem/home.png" alt="home"></a>
+</body>
+</html>
