@@ -12,22 +12,156 @@
         <h1>Formulários</h1>
         <h2>Formulários</h2>
         <p>Criando um formulário simples.</p>        
-        <form action="cadastro.php">
-            <p><label for="nome">Nome:</label>
-                <input type="text" name="nome" id="nome">
+        <form action="">
+            <p>
+                <label for="inome">Nome:</label>
+                <input type="text" name="nome" id="inome">
             </p>
-            <p><label for="sobrenome">Sobrenome:</label>
-                <input type="text" name="sobrenome" id="sobrenome">
+            <p>
+                <label for="isobrenome">Sobrenome:</label>
+                <input type="text" name="sobrenome" id="isobrenome">
             </p>
             <input type="submit" value="Enviar">
         </form>
-        <p>Para se criar um formulário como esse exemplo usamos o comando <strong>form.</strong><br>Inserimos um parágrafo onde no exemplo foi escrito <strong>nome.</strong> <br>Depois inserimos o comando <strong>input:text</strong> para criar essa caixa, onde o texto pode ser escrito. <br> Para criar o botão usamos o comando <strong>input:submit </strong>e dentro do parametro <strong>value,</strong> colocamos o que vai estar escrito dentro do botão.</p>
+        <p>Para criar um formulário como esse exemplo usamos o comando <strong>form.</strong><br>Inserimos um parágrafo onde no exemplo foi escrito <strong>nome.</strong> <br>Depois inserimos o comando <strong>input:text</strong> para criar essa caixa, onde o texto pode ser escrito. <br> Para criar o botão usamos o comando <strong>input:submit </strong>e dentro do parametro <strong>value,</strong> colocamos o que vai estar escrito dentro do botão.</p>
         <p>Podemos tirar o auto completar usando o parametro <strong>autocomplete='off'</strong> dentro da tag <strong>form.</strong></p>
-        <p>O parametro <strong>action</strong> serve para colocar o endereço onde os dados vão ser salvos, logo depois os dados serão enviados quando o botão de submit for utilizado.</p>
+        <p>O parametro <strong>action</strong> serve para colocar o endereço onde os dados serão salvos, logo depois os dados serão enviados quando o botão de submit for utilizado.</p>
+
         <h2>Relacionar</h2>
         <p>Vamos aprender como podemos fazer para relacionar um parágrafo com uma caixa de texto (ex: Nome: > caixa de texto na frente de nome).</p>
         <p>Primeiro passo, vamos envelopar o parágrafo, que no nosso caso é o parágrafo <strong>nome:</strong> <br> Vamos envelopar com o comando <strong>label</strong> <br> E no parametro <strong>for</strong> vamos colocar o <strong>id</strong> que colocamos no <strong>input</strong> relacionado.</p>
-        <p>Isso vai relacionar os dados para serem usados e salvos de maneira correta.</p>
+        <p>Isso vai relacionar os dados para serem usados e salvos de maneira correta, como no exemplo abaixo.</p>
+        <img src="imagem/form.png" alt="form" id="relacionar">
+
+        <h2>Métodos GET e POST</h2>
+        <p>Podemos utilizar os métodos GET ou POST para formulários.</p>
+        <p><strong>GET - </strong>É o método padrão para formelários, é utilizado para campos simples como cadastros, peso, altura, buscas e informações que não sejam sensíveis. <br>O limite para uso do GET são de 3 mil bites, aproximadamente 3 mil palavras.</p>
+        <p><strong>POST - </strong>Para utilizar o método POST é necessário fazer a alteração no parametro do <strong>form</strong>, esse método é recomendado a ser utilizado para senhas, número do cartão de crédito, endereços, envio de arquivos e etc.</p>
+
+        <section>
+            <h2>Tipos de Input</h2>
+            <p><strong>Input:Password - </strong>Utilizado para campos de senhas, os caracteres do campo digitado não  são visivéis.</p>
+            <form action="">
+                <div>
+                    <label for="senhas">Senha:</label>
+                    <input type="password" name="senhas" id="senhas">
+                </div>
+            </form>
+            <p><strong>Input:Reset - </strong>Utilizado para limpar os campos digitados.</p>
+            <form action="">
+                <div>
+                    <label for="nomes">Nome:</label>
+                    <input type="text" name="nomes" id="nomes">
+                    <input type="reset" value="Limpar">
+                </div>
+            </form>
+            <p><strong>Input:Numer - </strong>Utilizado para campos onde não aceita letras, apenas números.</p>
+            <form action="">
+                <div>
+                    <label for="numeros">Idade:</label>
+                    <input type="number" name="numeros" id="numeros">
+                </div>
+            </form>
+            <p><strong>Input:Month - </strong>Utilizado para campos onde só se aceita meses e anos.</p>
+            <form action="">
+                <div>
+                    <label for="meses">Mês:</label>
+                    <input type="month" name="meses" id="meses">
+                </div>
+            </form>
+            <p><strong>Input:Date - </strong>Utilizado para campos onde só se aceita dia, meses e anos.</p>
+            <form action="">
+                <div>
+                    <label for="dia">Dia:</label>
+                    <input type="date" name="dia" id="dia">
+                </div>
+            </form>
+            <p><strong>Input:Time - </strong>Utilizado para campos onde só se horas e minutos.</p>
+            <form action="">
+                <div>
+                    <label for="tempo">Hora:</label>
+                    <input type="time" name="tempo" id="tempo">
+                </div>
+            </form>
+        </section>
+
+        <section>
+            <h2>Tipos de parametros</h2>
+            <p><strong>required - </strong>Classifica como obrigatório o campo a ser preenchido.</p>
+            <form action="">
+                <div>
+                    <label for="dele">Nome:</label>
+                    <input type="text" name="dele" id="dele" required>
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+            <p><strong>minlength - </strong>Limita o número mínimo de caracteres a ser preenchido.</p>
+            <form action="">
+                <div>
+                    <label for="del">Nome:</label>
+                    <input type="text" name="del" id="del" minlength="15">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>     
+            <p><strong>maxlength - </strong>Limita o número máximo de caracteres a ser preenchido.</p>
+            <form action="">
+                <div>
+                    <label for="del">Nome:</label>
+                    <input type="text" name="del" id="del" maxlength="3">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form> 
+            <p><strong>size - </strong>Limita o número de caracteres a ser visualizado no campo preenchido.</p>
+            <form action="">
+                <div>
+                    <label for="del">Nome:</label>
+                    <input type="text" name="del" id="del" size="70">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form> 
+            <p><strong>placeholder - </strong>Mostra uma dica no campo a ser preenchido. ex.(min. 8 caraxteres)</p>
+            <form action="">
+                <div>
+                    <label for="del">Nome:</label>
+                    <input type="text" name="del" id="del" placeholder="Digite o Nome">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+            <p><strong>autocomplete - </strong>Dentro da tag <strong>input</strong> serve para relacionar o que cada input seria de fato, assim o navegador vai relacionar que aquele campo é para um nome de usuário, senha ou etc. Isso serve para que o usuário peça ao navegador que preencha automaticamente os campos do formulário. <br>Obs: No parametro autocomplete, existe diversos parametros, como <strong>username, new-password, current-password</strong></p>
+            <p><strong>min - </strong>Limita o número mínimo de números a ser preenchido.</p>
+            <form action="">
+                <div>
+                    <label for="del">Altura:</label>
+                    <input type="number" name="del" id="del" min="100">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form> 
+            <p><strong>max - </strong>Limita o número máximo de números a ser preenchido.</p>
+            <form action="">
+                <div>
+                    <label for="del">Idade:</label>
+                    <input type="number" name="del" id="del" max="2">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form> 
+            <p><strong>step - </strong>Limita o quanto um número pode variar ex.(step'0.5') vai aceitar somente números de 0.5 e assim por diante.</p>
+            <form action="">
+                <div>
+                    <label for="del">Nota:</label>
+                    <input type="number" name="del" id="del" step="0.5">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form> 
+            <p><strong>value - </strong>Sugere um valor para o campo a ser preenchido.</p>
+            <form action="">
+                <div>
+                    <label for="del">Nome:</label>
+                    <input type="number" name="del" id="del" value="7">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form> 
+        </section>
+
     </main>
     <h3>Página principal!</h3>
     <a href="index.html"><img src="imagem/home.png" alt="home"></a>

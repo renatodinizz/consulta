@@ -16,6 +16,7 @@ main{
     padding: 15px;
     margin: auto;
     text-align: left;
+    margin-top: 50px;
 }
 h1 {
     color: #614A40;
@@ -70,4 +71,7 @@ pre#grande {
 }
 img.exemplo {
     width: 500px;
+}
+img#relacionar{
+    width: 600px;
 }
