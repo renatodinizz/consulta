@@ -12,20 +12,24 @@
         <h1>Formulários</h1>
         <h2>Formulários</h2>
         <p>Criando um formulário simples.</p>        
-        <form action="">
-            <p>
-                <label for="inome">Nome:</label>
-                <input type="text" name="nome" id="inome">
-            </p>
-            <p>
-                <label for="isobrenome">Sobrenome:</label>
-                <input type="text" name="sobrenome" id="isobrenome">
-            </p>
-            <input type="submit" value="Enviar" id="mell">
-        </form>
-        <p>Para criar um formulário como esse exemplo usamos o comando <strong>form.</strong><br>Inserimos um parágrafo onde no exemplo foi escrito <strong>nome.</strong> <br>Depois inserimos o comando <strong>input:text</strong> para criar essa caixa, onde o texto pode ser escrito. <br> Para criar o botão usamos o comando <strong>input:submit </strong>e dentro do parametro <strong>value,</strong> colocamos o que vai estar escrito dentro do botão.</p>
-        <p>Podemos tirar o auto completar usando o parametro <strong>autocomplete='off'</strong> dentro da tag <strong>form.</strong></p>
+        <fieldset>
+            <legend>Dados simples</legend>
+            <form action="">
+                <p>
+                    <label for="inome">Nome:</label>
+                    <input type="text" name="nome" id="inome">
+                </p>
+                <p>
+                    <label for="isobrenome">Sobrenome:</label>
+                    <input type="text" name="sobrenome" id="isobrenome">
+                </p>
+                <input type="submit" value="Enviar" id="mell">
+            </form>
+        </fieldset>
+        <p>Para criar um formulário como esse exemplo usamos o comando <strong>form.</strong><br>Inserimos um parágrafo onde no exemplo foi escrito <strong>nome.</strong> <br>Depois inserimos o comando <strong>input:text</strong> para criar essa caixa, onde o texto pode ser escrito. <br> Para criar o botão usamos o comando <strong>input:submit </strong>e dentro do parametro <strong>value,</strong> colocamos o que vai estar escrito dentro do botão.</p>        
         <p>O parametro <strong>action</strong> serve para colocar o endereço onde os dados serão salvos, logo depois os dados serão enviados quando o botão de submit for utilizado.</p>
+        <p>A caixa foi criada com um comando <strong>fieldset</strong> e dentro do <strong>fieldset</strong> eu inseri o comando <strong>legend</strong> para dar um título. Essa caixa pode ser personalizada com CSS.</p>
+        <p>Podemos tirar o auto completar usando o parametro <strong>autocomplete='off'</strong> dentro da tag <strong>form.</strong></p>
 
         <h2>Relacionar</h2>
         <p>Vamos aprender como podemos fazer para relacionar um parágrafo com uma caixa de texto (ex: Nome: > caixa de texto na frente de nome).</p>
@@ -76,11 +80,32 @@
                     <input type="date" name="dia" id="dia">
                 </div>
             </form>
-            <p><strong>Input:Time - </strong>Utilizado para campos onde só se horas e minutos.</p>
+            <p><strong>Input:Time - </strong>Utilizado para campos onde somente utiliza horas e minutos.</p>
             <form action="">
                 <div>
                     <label for="tempo">Hora:</label>
                     <input type="time" name="tempo" id="tempo">
+                </div>
+            </form>
+            <p><strong>Input:Email - </strong>Utilizado para campos onde precisa haver o caractere <strong>@</strong> para validar.</p>
+            <form action="">
+                <div>
+                    <label for="iemail">Email:</label>
+                    <input type="email" name="email" id="iemail">
+                    <input type="submit" value="Enviar">
+                </div>
+            </form>
+            <p><strong>Input:Tel - </strong>Utilizado para campos onde somente números são aceitos.</p>
+            <form action="">
+                <div>
+                    <label for="itel">Telefone:</label>
+                    <input type="tel" name="tel" id="itel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required placeholder="(xx)xxxx-xxxx">
+                    <input type="submit" value="Enviar">
+                </div>
+                <div>
+                    <p><em><ins>Obs: Para ser aceito a quantidade de números desejada utiliza-se um parametro como no exemplo abaixo.</ins></em></p>
+                    <img src="imagem/tel.png" alt="codigo-telefone">
+                    <p><em>Nesse caso, vão ser aceito 4 digitos de 0 a 9, um traço e depois mais 4 digitos de 0 a 9.</em></p>
                 </div>
             </form>
         </section>
