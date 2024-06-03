@@ -44,147 +44,218 @@
 
         <section>
             <h2>Tipos de Input</h2>
-            <p><strong>Input:Password - </strong>Utilizado para campos de senhas, os caracteres do campo digitado não  são visivéis.</p>
-            <form action="">
-                <div>
-                    <label for="senhas">Senha:</label>
-                    <input type="password" name="senhas" id="senhas">
-                </div>
-            </form>
-            <p><strong>Input:Reset - </strong>Utilizado para limpar os campos digitados.</p>
-            <form action="">
-                <div>
-                    <label for="nomes">Nome:</label>
-                    <input type="text" name="nomes" id="nomes">
-                    <input type="reset" value="Limpar">
-                </div>
-            </form>
-            <p><strong>Input:Numer - </strong>Utilizado para campos onde não aceita letras, apenas números.</p>
-            <form action="">
-                <div>
-                    <label for="numeros">Idade:</label>
-                    <input type="number" name="numeros" id="numeros">
-                </div>
-            </form>
-            <p><strong>Input:Month - </strong>Utilizado para campos onde só se aceita meses e anos.</p>
-            <form action="">
-                <div>
-                    <label for="meses">Mês:</label>
-                    <input type="month" name="meses" id="meses">
-                </div>
-            </form>
-            <p><strong>Input:Date - </strong>Utilizado para campos onde só se aceita dia, meses e anos.</p>
-            <form action="">
-                <div>
-                    <label for="dia">Dia:</label>
-                    <input type="date" name="dia" id="dia">
-                </div>
-            </form>
-            <p><strong>Input:Time - </strong>Utilizado para campos onde somente utiliza horas e minutos.</p>
-            <form action="">
-                <div>
-                    <label for="tempo">Hora:</label>
-                    <input type="time" name="tempo" id="tempo">
-                </div>
-            </form>
-            <p><strong>Input:Email - </strong>Utilizado para campos onde precisa haver o caractere <strong>@</strong> para validar.</p>
-            <form action="">
-                <div>
-                    <label for="iemail">Email:</label>
-                    <input type="email" name="email" id="iemail">
-                    <input type="submit" value="Enviar">
-                </div>
-            </form>
-            <p><strong>Input:Tel - </strong>Utilizado para campos onde somente números são aceitos.</p>
-            <form action="">
-                <div>
-                    <label for="itel">Telefone:</label>
-                    <input type="tel" name="tel" id="itel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required placeholder="(xx)xxxx-xxxx">
-                    <input type="submit" value="Enviar">
-                </div>
-                <div>
-                    <p><em><ins>Obs: Para ser aceito a quantidade de números desejada utiliza-se um parametro como no exemplo abaixo.</ins></em></p>
-                    <img src="imagem/tel.png" alt="codigo-telefone">
-                    <p><em>Nesse caso, vão ser aceito 4 digitos de 0 a 9, um traço e depois mais 4 digitos de 0 a 9.</em></p>
-                </div>
-            </form>
+            <ul>
+                <li>
+                    <p><strong>Input:Password - </strong>Utilizado para campos de senhas, os caracteres do campo digitado não  são visivéis.</p>
+                    <form action="">
+                        <label for="senhas">Senha:</label>
+                        <input type="password" name="senhas" id="senhas">
+                    </form>
+                </li> <br>
+                <li>
+                    <p><strong>Input:Reset - </strong>Utilizado para limpar os campos digitados.</p>
+                    <form action="">
+                        <label for="nomes">Nome:</label>
+                        <input type="text" name="nomes" id="nomes">
+                        <input type="reset" value="Limpar">
+                    </form>
+                </li> <br>
+                <li>
+                    <p><strong>Input:Numer - </strong>Utilizado para campos onde não aceita letras, apenas números.</p>
+                    <form action="">
+                        <div>
+                            <label for="numeros">Idade:</label>
+                            <input type="number" name="numeros" id="numeros">
+                        </div>
+                    </form>
+                </li> <br>
+                <li>
+                    <p><strong>Input:Month - </strong>Utilizado para campos onde só se aceita meses e anos.</p>
+                    <form action="">
+                        <div>
+                            <label for="meses">Mês:</label>
+                            <input type="month" name="meses" id="meses">
+                        </div>
+                    </form>
+                </li> <br>
+                <li>
+                    <p><strong>Input:Date - </strong>Utilizado para campos onde só se aceita dia, meses e anos.</p>
+                    <form action="">
+                        <div>
+                            <label for="dia">Dia:</label>
+                            <input type="date" name="dia" id="dia">
+                        </div>
+                    </form>
+                </li> <br>
+                <li>
+                    <p><strong>Input:Time - </strong>Utilizado para campos onde somente utiliza horas e minutos.</p>
+                    <form action="">
+                        <div>
+                            <label for="tempo">Hora:</label>
+                            <input type="time" name="tempo" id="tempo">
+                        </div>
+                    </form>
+                </li> <br>
+                <li>
+                    <p><strong>Input:Email - </strong>Utilizado para campos onde precisa haver o caractere <strong>@</strong> para validar.</p>
+                    <form action="">
+                        <div>
+                            <label for="iemail">Email:</label>
+                            <input type="email" name="email" id="iemail">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form>
+                </li> <br>
+                <li>
+                    <p><strong>Input:Tel - </strong>Utilizado para campos onde somente números são aceitos.</p>
+                    <form action="">
+                        <div>
+                            <label for="itel">Telefone:</label>
+                            <input type="tel" name="tel" id="itel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" required placeholder="(xx)xxxx-xxxx">
+                            <input type="submit" value="Enviar">
+                        </div>
+                        <div>
+                            <p><em><ins>Obs: Para ser aceito a quantidade de números desejada utiliza-se um parametro como no exemplo abaixo.</ins></em></p>
+                            <img src="imagem/tel.png" alt="codigo-telefone">
+                            <p><em>Nesse caso, vão ser aceito 4 digitos de 0 a 9, um traço e depois mais 4 digitos de 0 a 9.</em></p>
+                        </div>
+                    </form>
+                </li> <br>
+                <li>
+                    <p><strong>Input:Checkbox - </strong>Utilizado para escolher entre uma opção ou mais.</p>
+                    <form action="">
+                        <fieldset>
+                            <legend>Esportes</legend>
+                            <input type="checkbox" name="basq" id="ibasq"> <label for="ibasq">Basquete</label><br>
+                            <input type="checkbox" name="fut" id="ifut"> <label for="ifut">Futebol</label><br>
+                            <input type="checkbox" name="nat" id="inat"> <label for="inat">Natação</label><br>
+                            <input type="checkbox" name="skt" id="iskt"> <label for="iskt">Skate</label><br>
+                            <input type="checkbox" name="jiu" id="ijiu"> <label for="ijiu">Jiu Jitsu</label><br>
+                        </fieldset>                
+                    </form>
+                </li> <br>
+                <li>
+                    <p><strong>Input:Radio - </strong>Utilizado para escolher somente uma opção dentre outras disponivéis.</p>
+                    <form action="">
+                        <fieldset>
+                            <legend>Sexo</legend>                 
+                            <input type="radio" name="Sexo" id="sxmas" value="M" checked> <label for="sxmas">Masculino</label>
+                            <input type="radio" name="Sexo" id="sxfem" value="F"> <label for="sxfem">Feminino</label>
+                        </fieldset>
+                        <p><em>Obs: Para conseguir desmarcar uma das opções, é necessário que os inputs tenham o mesmo <strong>name</strong>, pois fazem parte do mesmo grupo, já o <strong>id</strong> precisa ser diferente para que o <strong>label</strong> funcione e tenha uma relação. <br>Nesse exemplo, utilizamos o parametro <strong>value: "M"</strong> para masculino e <strong>value: "F"</strong> para feminino.</em></p>
+                    </form>
+                </li> <br>
+            </ul>
         </section>
 
         <section>
             <h2>Tipos de parametros</h2>
-            <p><strong>required - </strong>Classifica como obrigatório o campo a ser preenchido.</p>
-            <form action="">
-                <div>
-                    <label for="dele">Nome:</label>
-                    <input type="text" name="dele" id="dele" required>
-                    <input type="submit" value="Enviar">
-                </div>
-            </form>
-            <p><strong>minlength - </strong>Limita o número mínimo de caracteres a ser preenchido.</p>
-            <form action="">
-                <div>
-                    <label for="del">Nome:</label>
-                    <input type="text" name="del" id="del" minlength="15">
-                    <input type="submit" value="Enviar">
-                </div>
-            </form>     
-            <p><strong>maxlength - </strong>Limita o número máximo de caracteres a ser preenchido.</p>
-            <form action="">
-                <div>
-                    <label for="del">Nome:</label>
-                    <input type="text" name="del" id="del" maxlength="3">
-                    <input type="submit" value="Enviar">
-                </div>
-            </form> 
-            <p><strong>size - </strong>Limita o número de caracteres a ser visualizado no campo preenchido.</p>
-            <form action="">
-                <div>
-                    <label for="del">Nome:</label>
-                    <input type="text" name="del" id="del" size="70">
-                    <input type="submit" value="Enviar">
-                </div>
-            </form> 
-            <p><strong>placeholder - </strong>Mostra uma dica no campo a ser preenchido. ex.(min. 8 caraxteres)</p>
-            <form action="">
-                <div>
-                    <label for="del">Nome:</label>
-                    <input type="text" name="del" id="del" placeholder="Digite o Nome">
-                    <input type="submit" value="Enviar">
-                </div>
-            </form>
-            <p><strong>autocomplete - </strong>Dentro da tag <strong>input</strong> serve para relacionar o que cada input seria de fato, assim o navegador vai relacionar que aquele campo é para um nome de usuário, senha ou etc. Isso serve para que o usuário peça ao navegador que preencha automaticamente os campos do formulário. <br>Obs: No parametro autocomplete, existe diversos parametros, como <strong>username, new-password, current-password</strong></p>
-            <p><strong>min - </strong>Limita o número mínimo de números a ser preenchido.</p>
-            <form action="">
-                <div>
-                    <label for="del">Altura:</label>
-                    <input type="number" name="del" id="del" min="100">
-                    <input type="submit" value="Enviar">
-                </div>
-            </form> 
-            <p><strong>max - </strong>Limita o número máximo de números a ser preenchido.</p>
-            <form action="">
-                <div>
-                    <label for="del">Idade:</label>
-                    <input type="number" name="del" id="del" max="2">
-                    <input type="submit" value="Enviar">
-                </div>
-            </form> 
-            <p><strong>step - </strong>Limita o quanto um número pode variar ex.(step'0.5') vai aceitar somente números de 0.5 e assim por diante.</p>
-            <form action="">
-                <div>
-                    <label for="del">Nota:</label>
-                    <input type="number" name="del" id="del" step="0.5">
-                    <input type="submit" value="Enviar">
-                </div>
-            </form> 
-            <p><strong>value - </strong>Sugere um valor para o campo a ser preenchido.</p>
-            <form action="">
-                <div>
-                    <label for="del">Nome:</label>
-                    <input type="number" name="del" id="del" value="7">
-                    <input type="submit" value="Enviar">
-                </div>
-            </form> 
+            <ul>
+                <li>
+                    <p><strong>required - </strong>Classifica como obrigatório o campo a ser preenchido.</p>
+                    <form action="">
+                        <div>
+                            <label for="dele">Nome:</label>
+                            <input type="text" name="dele" id="dele" required>
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form>
+                </li> <br>
+                <li>
+                    <p><strong>minlength - </strong>Limita o número mínimo de caracteres a ser preenchido.</p>
+                    <form action="">
+                        <div>
+                            <label for="del">Nome:</label>
+                            <input type="text" name="del" id="del" minlength="15">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form> 
+                </li> <br>
+                <li>
+                    <p><strong>maxlength - </strong>Limita o número máximo de caracteres a ser preenchido.</p>
+                    <form action="">
+                        <div>
+                            <label for="del">Nome:</label>
+                            <input type="text" name="del" id="del" maxlength="3">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form> 
+                </li> <br>
+                <li>
+                    <p><strong>size - </strong>Limita o número de caracteres a ser visualizado no campo preenchido.</p>
+                    <form action="">
+                        <div>
+                            <label for="del">Nome:</label>
+                            <input type="text" name="del" id="del" size="70">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form> 
+                </li> <br>
+                <li>
+                    <p><strong>placeholder - </strong>Mostra uma dica no campo a ser preenchido. ex.(min. 8 caraxteres)</p>
+                    <form action="">
+                        <div>
+                            <label for="del">Nome:</label>
+                            <input type="text" name="del" id="del" placeholder="Digite o Nome">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form>
+                </li> <br>
+                <li>
+                    <p><strong>autocomplete - </strong>Dentro da tag <strong>input</strong> serve para relacionar o que cada input seria de fato, assim o navegador vai relacionar que aquele campo é para um nome de usuário, senha ou etc. Isso serve para que o usuário peça ao navegador que preencha automaticamente os campos do formulário. <br>Obs: No parametro autocomplete, existe diversos parametros, como <strong>username, new-password, current-password</strong></p>
+                </li> <br>
+                <li>
+                    <p><strong>min - </strong>Limita o número mínimo de números a ser preenchido.</p>
+                    <form action="">
+                        <div>
+                            <label for="del">Altura:</label>
+                            <input type="number" name="del" id="del" min="100">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form> 
+                </li> <br>
+                <li>
+                    <p><strong>max - </strong>Limita o número máximo de números a ser preenchido.</p>
+                    <form action="">
+                        <div>
+                            <label for="del">Idade:</label>
+                            <input type="number" name="del" id="del" max="2">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form>
+                </li> <br>
+                <li>
+                    <p><strong>step - </strong>Limita o quanto um número pode variar ex.(step'0.5') vai aceitar somente números de 0.5 e assim por diante.</p>
+                    <form action="">
+                        <div>
+                            <label for="del">Nota:</label>
+                            <input type="number" name="del" id="del" step="0.5">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form>
+                </li> <br>
+                <li>
+                    <p><strong>value - </strong>Sugere um valor para o campo a ser preenchido.</p>
+                    <form action="">
+                        <div>
+                            <label for="del">Nome:</label>
+                            <input type="number" name="del" id="del" value="7">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form> 
+                </li> <br>
+                <li>
+                    <p><strong>Checked - </strong>Deixa marcado uma opções ou mais como sugestão.</p>
+                    <form action="">
+                        <input type="checkbox" name="basq" id="ibasq" checked> <label for="ibasq">Basquete</label>
+                        <input type="checkbox" name="fut" id="ifut"> <label for="ifut">Futebol</label>
+                        <input type="checkbox" name="nat" id="inat"> <label for="inat">Natação</label>
+                        <input type="checkbox" name="skt" id="iskt"> <label for="iskt">Skate</label>
+                        <input type="checkbox" name="jiu" id="ijiu" checked> <label for="ijiu">Jiu Jitsu</label>
+                    </form>
+                </li> <br>
+            </ul>           
+                        
         </section>
 
     </main>

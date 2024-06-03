@@ -75,3 +75,7 @@ img.exemplo {
 img#relacionar{
     width: 600px;
 }
+section > ul {
+    list-style-type: '\2736';   
+      
+}
