@@ -107,6 +107,36 @@
                     </form>
                 </li> <br>
                 <li>
+                    <p><strong>Input:Color - </strong>Utilizado para selecionar uma cor, dentre todas as posibilidades no formato exadecimal. <br><em>Obs: O parametro <strong>value</strong> pode ser utilizado para deixar uma cor como sugestão.</em></p>
+                    <form action="">
+                        <div>
+                            <label for="iicor">Cor:</label>
+                            <input type="color" name="cor" id="icor" value="#00ff00">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form>
+                </li> <br>
+                <li>
+                    <p><strong>Input:Range - </strong>Insere uma barra de precisão, que pode enviar valores. <br><em>Obs: Por padrão os valores iniciais são de 0 à 100, mas podemos acrescentar os parametros <strong>min</strong> e <strong>max</strong> para limitar essa variação, já o parametro <strong>value</strong> é usado para indicar onde a barra vai iniciar, como uma sugestão.</em></p>
+                    <form action="">
+                        <div>
+                            <label for="inivel">Nivel:</label>
+                            <input type="range" name="nivel" id="inivel">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form>
+                </li> <br>
+                <li>
+                    <p><strong>Input:File - </strong>Utilizado para carregar imagens como <strong>upload</strong>. <br><em>Para subir os arquivos <strong>NÃO</strong> se deve utilizar o método <strong>GET</strong>, mas sim o método <strong>POST.</strong></em></p>
+                    <form action="">
+                        <div>
+                            <label for="ifoto">Arquivo: </label>
+                            <input type="file" name="foto" id="ifoto">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form>
+                </li> <br>
+                <li>
                     <p><strong>Input:Tel - </strong>Utilizado para campos onde somente números são aceitos.</p>
                     <form action="">
                         <div>
@@ -149,7 +179,64 @@
         </section>
 
         <section>
-            <h2>Tipos de parametros</h2>
+            <h2>Outros comandos importantes</h2>
+            <ul>
+                <li>
+                    <p><strong>select - </strong>Abre uma caixa opções de seleção.</p>
+                    <form action="">
+                        <div>
+                            <label for="iselec">Estado: </label>
+                            <select name="estado" id="iestado">
+                                <option value="">---Escolha um estado---</option>
+                                <optgroup label="Região Sudeste">
+                                    <option value="SP">São Paulo</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="MG">Minas Gerais</option>
+                                </optgroup>
+
+                                <optgroup label="Região Nordeste">
+                                    <option value="CE">Ceará</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="AL">Alagoas</option>
+                                </optgroup>
+                            </select>
+                            
+                        </div>
+                    </form>
+                    <p><em>Obs: Defícil de explicar, então vou deixar a imagem do código.</em></p>
+                    <img src="imagem/select.png" alt="selecionar" class="form">
+                </li> <br>
+                <li>
+                    <p><strong>datalist - </strong>Abre uma caixa com opções para selecionar, porém é permitido digitar caso algumas das opções aprensentadas não seja suficiente.</p>
+                    <form action="">
+                        <div>
+                            <label for="iprof">Profissão: </label>
+                            <input type="text" name="prof" id="iprof" list="lstprof">
+                            <datalist id="lstprof">
+                                <option value="ADM">Administrador</option>
+                                <option value="DEV">Desenvolvedor</option>
+                                <option value="CONT">Contador</option>
+                                <option value="ENG">Engenheiro</option>
+                            </datalist>
+                        </div>
+                    </form>
+                    <p><em>Obs: Defícil de explicar, então vou deixar a imagem do código.</em></p>
+                    <img src="imagem/datalist.png" alt="datalist" class="form">
+                </li> <br>
+                <li>
+                    <p><strong>Textarea - </strong>Abre uma caixa onde o usuário pode digitar. <br><em>Para evitar problemas <strong>NÃO</strong> se deve utilizar o método <strong>GET</strong>, mas sim o método <strong>POST.</strong></em></p>
+                    <form action="">
+                        <div>
+                            <label for="imsg">Mensagem: </label> <br>
+                            <textarea name="msg" id="imsg"></textarea>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Alguns parametros</h2>
             <ul>
                 <li>
                     <p><strong>required - </strong>Classifica como obrigatório o campo a ser preenchido.</p>

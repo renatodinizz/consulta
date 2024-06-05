@@ -76,6 +76,8 @@ img#relacionar{
     width: 600px;
 }
 section > ul {
-    list-style-type: '\2736';   
-      
+    list-style-type: '\2736';        
+}
+section > ul > li > img.form {
+    width: 600px;
 }
