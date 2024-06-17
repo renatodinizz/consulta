@@ -42,6 +42,9 @@ p{
 a.titulo{
     text-decoration: none;
 }
+a.titulo:link {
+    color: #E05D23;
+}
 a.titulo:visited {
     color: #E05D23;
 }
