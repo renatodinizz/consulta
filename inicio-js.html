@@ -10,12 +10,34 @@
 <body>
     <main>
         <h1>Iniciando com JavaScript</h1>
+
         <h2>Alguns comandos simples</h2>
         <p>Temos alguns comando simples que precisamos guardar.</p>
         <ul>
             <li><strong>window.alert - </strong>É utilizado para exibir uma caixa de mensagem com um alerta na tela.</li>
             <li><strong>window.confirm - </strong>É utilizado para exibir uma caixa de mensagem com uma confirmação na tela.</li>
             <li><strong>window.prompt - </strong>É utilizado para exibir uma caixa de mensagem com um espaço para ser digitado na tela.</li>
+        </ul>
+
+        <h2>Conversão</h2>
+        <p>Para converter uma string em um número inteiro ou flutuante, usamos o comando <strong>number.parseInt(n)</strong> para converter para um número inteiro e <strong>number.parseFloat(n)</strong> para converter em um  número flutuante. <br><em>Obs: Observe que o <strong>Int e Float</strong> dentro do comando estão com a letra inicial maiúscula, portanto é preciso se manter na norma.</em></p>
+        <p>Atualmente no JavaScript podemos simpificar e usar o comando <strong>numeber(n)</strong> que o próprio JavaScript vai saber se o número é inteiro ou flutuante e converter por ele mesmo, mas isso não descarta o uso dos comandos acima, que servem para ocasiões específicas que eu queira somente um número inteiro ou flutuante.</p> <br>
+        <p>Para converter algum yipo de variável para uma string usamos o comando <strong>n.toString</strong> ou <strong>string(n)</strong> como no exemplo. <br><em>string(51) ou 51.toString()</em></p>
+
+        <h2>Formatando Strings</h2>
+        <p>Para concatenar uma string com um valor numerico, podemos fazer de duas formas.</p>
+        <p><strong>Concatenação</strong> 'O aluno ' + nome + 'de ' + idade + 'anos, passou na prova com a nota:' + nota <br>Ou <br><strong>Template string</strong> `O aluno ${nome} de ${idade} anos, passou na prova com a nota ${nota}`</p>
+        <p><em>Obs: No segundo exemplo, repare que foi utilizado crase ao invés de aspas.</em></p>
+        <h3>Alguns outros comando para formatar strings</h3>
+        <ul>
+            <li>var.lenght - Mostra quantos caracteres tem a string.</li>
+            <li>var.toUpperCase() - Tudo fica em letras MAIUSCULAS.</li>
+            <li>var.toLowCase() - Tudo fica em letras minusculas.</li>
+        </ul>
+        <h3>Formatando números</h3>
+        <ul>
+            <li><strong>var.toFixed(2)</strong> - Deixa o número com duas casas decimais, por exemplo: n1 = 1543.5 | n1.toFixed(2) vai me mostrar: 1543.50</li>
+            <li><strong>n1.toLocaleString('pt-BR', {style; 'currency', currency: 'BRL'})</strong> - Esse comando serve para formatar a variavél em uma unidade monetária. <br>O resultado seria: R$ 1,543.50</li>
         </ul>
     </main>
     <h3>Página principal!</h3>
