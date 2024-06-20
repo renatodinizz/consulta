@@ -81,9 +81,9 @@ img.mdq {
 img#relacionar{
     width: 600px;
 }
-img#imagem-js1 {
-    height: 300px;
-    width: 150px;
+img.imagem-js-vertical {
+    height: 350px;
+    width: 200px;
 }
 img#imagem-js2 {
     height: 300px;

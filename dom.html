@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagem/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <h1>DOM - Document Object Model</h1>
+        <h2>Árvore DOM</h2>
+        <p>Vamos analisar um exemplo de uma árvore DOM</p>
+        <img class="imagem-js-vertical" src="imagem/JavaScript/arvore-dom.png" alt="arv-dom">
+
+        <h2>Selecionando elementos</h2>
+        <p>Para selecinar elementos, podemos selecinar por: <br><strong>Marca</strong><br><strong>ID</strong><br><strong>Nome</strong><br><strong>Classe</strong><br><strong>Seletor</strong>
+        </p>
+        <h3>Selecionar por marca</h3>
+        <p>
+            Para selecionar por marca, usamos o comando: <strong>window.document.getElementsByTagName('p')[1]</strong> <br>
+            Neste caso, o comando indica que o elemento a ser selecionado é uma tag. <br>Dentro do paragráfo está especidficando qual tag será selecionada <br>O colchetes está indicando qual dentre os paragráfos será selecionado.
+        </p>
+        <h3>Selecionar por ID</h3>
+        <p>Para selecionar por ID, usamos o comando: <strong>window.document.getElementById()</strong></p>
+        <h3>Selecionar por nome</h3>
+        <p>Para selecionar por nome, usamos o comando: <strong>window.document.getElementsByName()[]</strong></p>
+        <h3>Selecionar por classe</h3>
+        <p>Para selecionar por classe, usamos o comando: <strong>window.document.getElementsByClassName()[]</strong></p>
+        <h3>Selecionar por seletor</h3>
+        <p>Para selecionar por seletor, usamos o comando: <br> <strong>window.document.querySelector('div.tag') ou ('id#tag')</strong><br> ou o comando: <br> <strong>window.document.querySelectorAll('div.tag') ou ('id#tag')</strong></p>
+
+        <h2>Alguns outros comandos com DOM</h2>
+        <ul>
+            <li><strong>p1.style.color - </strong>Muda a cor da variável.</li>
+            <li><strong>document.body.style.background - </strong>Muda a cor da de fundo.</li>
+        </ul>
+        
+    </main>
+    <h3>Página principal!</h3>
+    <a href="index.html"><img src="imagem/home.png" alt="home"></a>
+</body>
+</html>
