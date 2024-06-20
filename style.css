@@ -81,6 +81,14 @@ img.mdq {
 img#relacionar{
     width: 600px;
 }
+img#imagem-js1 {
+    height: 300px;
+    width: 150px;
+}
+img#imagem-js2 {
+    height: 300px;
+    width: 250px;
+}
 section > ul {
     list-style-type: '\2736';        
 }
