@@ -21,7 +21,26 @@
             <li><strong>documento.write(p1.InnerText) - </strong>É utilizado para escrever algo que está armazenado em uma variável na página atual.</li>
             <li><strong>documento.write(p1.InnerHtML) - </strong>É utilizado para escrever algo que está armazenado em uma variável na página atual, da maneira em que foi formatado em HTML.</li>
             <li><strong>Hora atual - </strong>crie uma variável e chame o comando <strong>New Date()</strong>, crie outra variável e chame a primeira com o comando getHours <strong>variável.getHours</strong>, isso serve para ano, dia e outras funções.</li>
+            <li><strong>Inserindo Emoticons</strong> - Para adicionar emoticons vamos usar o código de cada meticon específico como : \u{1f449} entre aspas.</li>
         </ul>
+
+        <h2>Inserir uma imagem</h2>
+        <p>
+            Para inserir uma imagem via JavaScript, criamos uma variável, adicionamos o comando e adicionamos um atributo, que nesse caso é um id. <br>
+            Seria o mesmo que adicionar o comando <strong>img com um id em HTML.</strong> <br>
+            A primeira linha cria uma variável para a imagem e a segunda linha dá um atributo.
+        </p>
+        <img src="imagem/JavaScript/img-js.png" alt="inserir imagem">
+        <p>
+            Criada a variável é hora de inserir a imagem. Para isso vamos usar um comando já visto, mas com outros atributos. <br>
+            <strong>img.setAttribute('src', 'imagens/adolescente-fem.png') - </strong>Chamammos a variável com o comando e dentro dos parenteses usamos o <strong>src</strong> para puxar a imagem e o restante para identificar em que pasta a imagem está e o nome do arquivo.
+        </p>
+        <p>
+            Para finalizar e fazer a imagem aparecer vamos usar o comando <strong>res.appendChild(img)</strong><br>
+            <strong>res</strong> - é a variável criada em JS para onde a imagem vai ser adicionada <br>
+            <strong>appendChild</strong> - O comando para fazer a imagem aparecer. <br>
+            <strong>img</strong> - A variável que criada em JS para criar a imagem.
+        </p>
 
         <h2>Conversão</h2>
         <p>Para converter uma string em um número inteiro ou flutuante, usamos o comando <strong>number.parseInt(n)</strong> para converter para um número inteiro e <strong>number.parseFloat(n)</strong> para converter em um  número flutuante. <br><em>Obs: Observe que o <strong>Int e Float</strong> dentro do comando estão com a letra inicial maiúscula, portanto é preciso se manter na norma.</em></p>
@@ -42,7 +61,18 @@
         <ul>
             <li><strong>var.toFixed(2)</strong> - Deixa o número com duas casas decimais, por exemplo: n1 = 1543.5 | n1.toFixed(2) vai me mostrar: 1543.50</li>
             <li><strong>n1.toLocaleString('pt-BR', {style; 'currency', currency: 'BRL'})</strong> - Esse comando serve para formatar a variavél em uma unidade monetária. <br>O resultado seria: R$ 1,543.50</li>
-        </ul>        
+        </ul> 
+        
+        <h2>Arrays</h2>
+        <p>Um <strong>Array, Vetor ou variável composta</strong> é uma variável que tem vários elementos, cada elemento é composto por seu valor e por uma chave de identificação. <br><em>Obs: Lmebrando que os indices começam em 0 e não em 1.</em></p>
+        <p>Para criar um arrya basta declarar uma variável normalmente e colocar os valores dentro de colchetes. <br>var num = [4, 5, 8, 9, 54, 78]</p>
+        <p>Para adicionar um valor a um array é simples, basta declarar o array desejadoe entre colchetes o indice a ser criado e depois o valor do elemento. <br>Por exemplo, vou demonstrar como eu posso adicionar um valor no exempo acima. <br><strong>num[6] = 18</strong> - Nesse caso o meu array ficaria: num = [4, 5, 8, 9, 54, 78, 18] <br><strong>num.push(34)</strong> - Com esse comando o JavaScript entende ejá coloca o valor declarado para a última posição do array. <br><strong>num.length</strong> - Com esse comando você consegue verificar quantos valores o seu array. <br><strong>num.sort()</strong> - Com esse comando o JavaScript vai organizar os valores do array em decrescente. <br><strong>num.indexOf(54)</strong> - Com esse comando o JavaScript vai buscar no array em qual posição está o valor 54, e vai me retornar a posição em que ele se encontra, se por acaso o valor que não está no array ele vai me retornar a posição -1.</p>
+        <h3>Estrutura For com array</h3>
+        <p>Estrutura For comum usada para imprimir todos os valores e suas posições.</p>
+        <img src="imagem/JavaScript/for-array.png" alt="for para array">
+        <p>Agora vamos ver uma versão do for <strong>específica</strong> para arrays e objetos, que é mais simplificada. <br>Para entendimentos, podemos ler da seguinte forma: Para cada posição, dentro da minha variável faça...</p>
+        <img src="imagem/JavaScript/for-array-simples.png" alt="versão simplificada do for para arrays">
+        
     </main>
     <h3>Página principal!</h3>
     <a href="index.html"><img src="imagem/home.png" alt="home"></a>
