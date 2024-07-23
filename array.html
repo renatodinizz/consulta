@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagem/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <h1>Array</h1>
+        <h2>Comandos simples</h2>
+        <p>
+            Um <strong>Array, Vetor ou variável composta</strong> é uma variável que tem vários elementos, cada elemento é composto por seu valor e por uma chave de identificação. <br><em>Obs: Lmebrando que os indices começam em 0 e não em 1.</em>
+        </p>
+        <p>
+            Para criar um arrya basta declarar uma variável normalmente e colocar os valores dentro de colchetes. <br>var num = [4, 5, 8, 9, 54, 78]
+        </p>
+        <p>
+            Alguns exemplos, de como trabalhar com um array usando como exemplo a variável <strong>num</strong>.
+        </p>
+        <ul id="arrayList">
+            <li>
+                <strong>num[6] = 18</strong> - Para adicionar ou alterar um valor, primeiro declara a posição que será inserido e depois o valor, que nesse caso ficaria: num = [4, 5, 8, 9, 54, 78, 18] 
+            </li>
+            <li>
+                <strong>num.push(34)</strong> - Com esse comando o JavaScript entende e já coloca o valor declarado para a última posição do array. 
+            </li>
+            <li>
+                <strong>num.unshift( )</strong> - Usamos esse comando para adicionar um valor na posição 0 do array. 
+            </li>
+            <li>
+                <strong>num.splice(2, 0, 'item1', 'item2')</strong> - Usamos esse comando para adicionar mais de um valor, indicando a posição desejada, quantos valores serão apagados e o valorres a serem adicionados no array. Nesse exemplo ele iria adicionar na posição 2, não iria excluir nenhum item e os valores 'item1' e 'item2' seriam adicionados e iria alterar a posição dos valores seguintyes. 
+            </li>
+            <li>
+                <strong>num.pop( )</strong> - Usamos esse comando para deletar o último valor do array.  
+            </li>
+            <li>
+                <strong>num.shift( )</strong> - Usamos esse comando para deletar o primeiro valor do array. 
+            </li>
+            <li>
+                <strong>num.length</strong> - Com esse comando você consegue verificar quantos valores tem o seu array. 
+            </li>
+            <li>
+                <strong>num.length -1</strong> - Com esse comando o JavaScript retorna o último valor do seu array. 
+            </li>
+            <li>
+                <strong>num.sort( )</strong> - Com esse comando o JavaScript vai organizar os valores do array em ordem alfabética.                   
+            </li>
+            <li>
+                <strong>num.reverse( )</strong> - Com esse comando o JavaScript vai organizar os valores do array em ordem reversa de alfabética.
+            </li>
+            <li>
+                <strong>num.sort(function (a, b){return a - b})</strong> - Com esse comando o JavaScript vai organizar os valores numericos do array em ordem crescente, para fazer de forma decrescente basta alterar o parametro para b -a.
+            </li>
+            <li>
+                <strong>num.join('o que quiser')</strong> - Com esse comando o vai adicoinar entre os separadores o texto dentro das aspas.  
+            </li>
+            <li>
+                <strong>num.indexOf(54)</strong> - Com esse comando o JavaScript vai buscar no array em qual posição está o valor 54, e vai me retornar a posição em que ele se encontra, se por acaso o valor que não está no array ele vai me retornar a posição -1. 
+            </li>
+        </ul>
+        <h2>Estrutura For com array</h2>
+        <p>Estrutura For comum usada para imprimir todos os valores e suas posições.</p>
+        <img src="imagem/JavaScript/for-array.png" alt="for para array">
+        <p>Agora vamos ver uma versão do for <strong>específica</strong> para arrays e objetos, que é mais simplificada. <br>Para entendimentos, podemos ler da seguinte forma: Para cada posição, dentro da minha variável faça...</p>
+        <img src="imagem/JavaScript/for-array-simples.png" alt="versão simplificada do for para arrays">
+
+        <h2>Concatenando Arrays</h2>
+        <p>Para concatenar um Array, segue o exemploda imagem abaixo.</p>
+        <img src="imagem/JavaScript/concatenar-array.png" alt="concatenação de um array">
+
+        <h2>Criando novo Array com base em outro Array</h2>
+        <p>Para criar um novo Array com elementos de um já existente, usamos como no exemplo abaixo.</p>
+        <img src="imagem/JavaScript/criar-array-existente.png" alt="criar array já existente">
+        <p>Nesse caso, o novo Array pegaria alguns elementos usando o comando <strong>slice</strong>, o primeiro parametro indica a posição inicial que será acrescentado, o segundo parametro indica a posição final a ser adicionado. <em>lembrando que o último parametro não é adicionado a posição indicada mas sim uma antes.</em></p>
+    </main>
+    <h3>Página principal!</h3>
+    <a href="index.html"><img src="imagem/home.png" alt="home"></a>
+</body>
+</html>

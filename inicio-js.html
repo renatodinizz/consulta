@@ -14,14 +14,16 @@
         <h2>Alguns comandos simples</h2>
         <p>Temos alguns comando simples que precisamos guardar.</p>
         <ul>
+            <li><strong>.value - </strong>É utilizado para atribuir o que foi solicitado como valor, por exemplo, em um formulário onde a pessoa digita um texto, podemos usar o texto digitado como valor.</li>
             <li><strong>window.alert - </strong>É utilizado para exibir uma caixa de mensagem com um alerta na tela.</li>
             <li><strong>window.confirm - </strong>É utilizado para exibir uma caixa de mensagem com uma confirmação na tela.</li>
-            <li><strong>window.prompt - </strong>É utilizado para exibir uma caixa de mensagem com um espaço para ser digitado na tela.</li>
+            <li><strong>window.prompt - </strong>É utilizado para exibir uma caixa de mensagem com um espaço para ser digitado na tela.</li>            
             <li><strong>document.write - </strong>É utilizado para escrever algo na página atual.</li>
             <li><strong>documento.write(p1.InnerText) - </strong>É utilizado para escrever algo que está armazenado em uma variável na página atual.</li>
             <li><strong>documento.write(p1.InnerHtML) - </strong>É utilizado para escrever algo que está armazenado em uma variável na página atual, da maneira em que foi formatado em HTML.</li>
             <li><strong>Hora atual - </strong>crie uma variável e chame o comando <strong>New Date()</strong>, crie outra variável e chame a primeira com o comando getHours <strong>variável.getHours</strong>, isso serve para ano, dia e outras funções.</li>
             <li><strong>Inserindo Emoticons</strong> - Para adicionar emoticons vamos usar o código de cada meticon específico como : \u{1f449} entre aspas.</li>
+            
         </ul>
 
         <h2>Inserir uma imagem</h2>
@@ -55,35 +57,16 @@
         <ul>
             <li>var.lenght - Mostra quantos caracteres tem a string.</li>
             <li>var.toUpperCase() - Tudo fica em letras MAIUSCULAS.</li>
-            <li>var.toLowCase() - Tudo fica em letras minusculas.</li>
+            <li>var.toLowerCase() - Tudo fica em letras minusculas.</li>
         </ul>
+        <p><em><strong>.toLowerCase - </strong>utilizado para converter texto de entrada do usuário em letras minuscúlas, muito útil para não deixar com sensibilidade de maiúscula ou minúscula.</em></p>
         <h3>Formatando números</h3>
         <ul>
             <li><strong>var.toFixed(2)</strong> - Deixa o número com duas casas decimais, por exemplo: n1 = 1543.5 | n1.toFixed(2) vai me mostrar: 1543.50</li>
             <li><strong>n1.toLocaleString('pt-BR', {style; 'currency', currency: 'BRL'})</strong> - Esse comando serve para formatar a variavél em uma unidade monetária. <br>O resultado seria: R$ 1,543.50</li>
         </ul> 
         
-        <h2>Arrays</h2>
-        <p>
-            Um <strong>Array, Vetor ou variável composta</strong> é uma variável que tem vários elementos, cada elemento é composto por seu valor e por uma chave de identificação. <br><em>Obs: Lmebrando que os indices começam em 0 e não em 1.</em>
-        </p>
-        <p>
-            Para criar um arrya basta declarar uma variável normalmente e colocar os valores dentro de colchetes. <br>var num = [4, 5, 8, 9, 54, 78]
-        </p>
-        <p>
-            Alguns exemplos, de como trabalhar com um array usando como exemplo a variável <strong>num</strong>.<br>
-            <strong>num[6] = 18</strong> - Para adicionar ou alterar um valor, primeiro declara a posição que será inserido e depois o valor, que nesse caso ficaria: num = [4, 5, 8, 9, 54, 78, 18]<br>
-            <strong>num.push(34)</strong> - Com esse comando o JavaScript entende e já coloca o valor declarado para a última posição do array. <br>
-            <strong>num.length</strong> - Com esse comando você consegue verificar quantos valores tem o seu array.<br>
-            <strong>num.length -1</strong> - Com esse comando o JavaScript retorna o último valor do seu array.<br>
-            <strong>num.sort()</strong> - Com esse comando o JavaScript vai organizar os valores do array em decrescente. <br>
-            <strong>num.indexOf(54)</strong> - Com esse comando o JavaScript vai buscar no array em qual posição está o valor 54, e vai me retornar a posição em que ele se encontra, se por acaso o valor que não está no array ele vai me retornar a posição -1.
-        </p>
-        <h3>Estrutura For com array</h3>
-        <p>Estrutura For comum usada para imprimir todos os valores e suas posições.</p>
-        <img src="imagem/JavaScript/for-array.png" alt="for para array">
-        <p>Agora vamos ver uma versão do for <strong>específica</strong> para arrays e objetos, que é mais simplificada. <br>Para entendimentos, podemos ler da seguinte forma: Para cada posição, dentro da minha variável faça...</p>
-        <img src="imagem/JavaScript/for-array-simples.png" alt="versão simplificada do for para arrays">
+        
         
     </main>
     <h3>Página principal!</h3>
