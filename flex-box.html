@@ -14,7 +14,7 @@
     <main>
         <h1>FlexBox</h1>
         <h2>flex-direction</h2>
-        <p>O comando <strong>flex-direction</strong> informa a direção que os itens serão organizados, por padrão a direção será: <strong>row</strong>, mas temos outros parametros como:</p>
+        <p>O comando <strong>flex-direction</strong> informa a direção que os itens serão organizados, esse comando é utilizado no pai e não nos filhos. Por padrão a direção será: <strong>row</strong>, mas temos outros parametros como:</p>
         <ul>
             <li><strong>row</strong> - alinha os itens em linha.</li>
             <li><strong>row-reverse</strong> - alinha em linha mas os itens ficam revertido.</li>
@@ -23,10 +23,112 @@
         </ul>
         <h3>Eixos</h3>
         <p>Para entender um pouco melhor sobre eixos, analise a imagem abaixo.</p>
-        <img src="imagem/eixos-flex.png" alt="eixos-flex">
+        <img src="imagem/css/eixos-flex.png" alt="eixos-flex">
 
         <h2>flex-wrap</h2>
-        <p>O comando <strong>flex-wrap</strong> defini se o conteúdo vai ficar agrupado ou não, por padrão o parametro será: <strong>nowrap</strong>, mas temos outros parametros como:
+        <p>
+            O comando <strong>flex-wrap</strong> defini se o conteúdo vai ficar agrupado ou não, por padrão o parametro será: <strong>nowrap</strong>, mas temos outros parametros como: <strong>wrap</strong> que agrupa o conteúdo e <strong>wrap-reverse</strong> que agrupa o conteúdo e revertea ordem. <br>
+            Vamos ver alguns exemplos.
+        </p>
+        <h3>nowrap</h3>
+        <img src="imagem/CSS/nowrap.png" alt="nowrap">
+        <h3>wrap</h3>
+        <img src="imagem/CSS/wrap.png" alt="wrap">
+        <h3>wrap-reverse</h3>
+        <img src="imagem/CSS/wrap-reverse.png" alt="wrap-reverse">
+
+        <h2>Flex-flow</h2>
+        <p>É uma  junção do <strong>flex-direction + flex-wrap</strong>. Vamos colocar o primiero comando a direção de pois se vai agrupar ou não.</p>
+        <p>
+            Podemos substituir: <br>
+            flex-direction: row; <br>
+            flex-wrap: nowrap; <br>
+            Por: <br>
+            <strong>flex-flow: row nowrap;</strong>
+        </p>
+
+        <h2>Justify-Content</h2>
+        <p>Usado para alinhar os intens dentro da direção usada. Por padrão é utilizado o <strong>flex-start</strong>.</p>
+        <h3>justify-content: flex-start;</h3>        
+        <p>Vai iniciar no <strong>main start</strong></p>
+        <img src="imagem/CSS/just-start.png" alt="start">
+        <h3>justify-content: flex-end;</h3>
+        <p>Vai iniciar no <strong>main end</strong>.</p>
+        <img src="imagem/CSS/just-end.png" alt="end">
+        <h3>justify-content: center;</h3>
+        <p>Vai centralizar os itens.</p>
+        <img src="imagem/CSS/just-center.png" alt="center">
+        <h3>justify-content: space-between;</h3>
+        <p>Vai coloar o primeiro elemento no iniciar no <strong>main start</strong> e o último no <strong>main end</strong>, depois disso vai distribuir os itens entre os espaços restante.</p>
+        <img src="imagem/CSS/just-between.png" alt="between">
+        <h3>justify-content: space-evenly;</h3>
+        <p>Não vai grudar o primeiro e o último item nas extremidades, mas vai deixar um espaço igual em todo o container.</p>
+        <img src="imagem/CSS/just-evenly.png" alt="evenly">
+        <h3>justify-content: space-around;</h3>
+        <p>Vai dividir o espaço do container e distribuir entre o número de itens e centralizar cada item na sua porção de espaço.</p>
+        <img src="imagem/CSS/just-around.png" alt="around">
+        <h3>Space-between, Sapce-Evenly e Space-around</h3>
+        <p>É diferente todos os três e para deixar mais claro, vou inserir uma imagem para melhor aprendizagem.</p>
+        <img src="imagem/CSS/diferenca.png" alt="diferença entre spaces">
+        <h3>Justify-Content com Columns</h3>
+        <p>Vamos ver exemplo do justify-content com colunas.</p>
+        <img src="imagem/CSS/just-column.png" alt="colunas">
+
+        <h2>Align items</h2>
+        <p>Usada no Flex pai, ou seja, no container. Vai alinhar os itens no <strong>eixo transversal</strong> ou <strong>cross-axis</strong> que é o mesmo. Por padrão o align items aceita o <strong>stretch.</strong></p>
+        <h3>Align Items: stretch</h3>
+        <p>Vai esticar os itens para caberem  no container.</p>
+        <img src="imagem/CSS/align-stretch.png" alt="stretch">
+        <h3>Align Items: flex-start</h3>
+        <p>Vai grudar os itens no <strong>cross start</strong> e deixar um espaço para o restante do container.</p>
+        <img src="imagem/CSS/align-start.png" alt="start">
+        <h3>Align Items: flex-end</h3>
+        <p>Vai grudar os itens no <strong>cross end</strong> e deixar um espaço para o restante do container.</p>
+        <img src="imagem/CSS/align-end.png" alt="end">
+        <h3>Align Items: center</h3>
+        <p>Vai centralizar os itens no container.</p>
+        <img src="imagem/CSS/align-center.png" alt="center">
+        
+        <h2>Align-Content</h2>
+        <p>Usado para alinhar os intens dentro do conteúdo empacotado, so faz sentido usar o <strong>align-content</strong> quando eu estou usando o <strong>wrap ou wrap-reverse</strong>. Por padrão é utilizado o <strong>stretch</strong>.</p>
+        <h3>align-content: stretch;</h3>        
+        <p>Vai esticar os itens para caberem  no espaço empacotado.</p>
+        <img src="imagem/CSS/cont-stretch.png" alt="start">
+        <h3>align-content: flex-start;</h3>        
+        <p>Vai grudar os itens no <strong>cross start</strong> e deixar o restante do conteúdo em branco.</p>
+        <img src="imagem/CSS/cont-start.png" alt="start">
+        <h3>align-content: flex-end;</h3>
+        <p>Vai grudar os itens no <strong>cross end</strong> e deixar o restante do conteúdo em branco.</p>
+        <img src="imagem/CSS/cont-end.png" alt="end">
+        <h3>align-content: center;</h3>
+        <p>Vai centralizar os itens e deixar espaços no <strong>cross start</strong> e no <strong>cross end</strong>.</p>
+        <img src="imagem/CSS/cont-center.png" alt="center">
+        <h3>align-content: space-between;</h3>
+        <p>Vai colocar a primeira quebra de linha no <strong>cross start</strong> e as outras quebras no <strong>cross end</strong>, depois disso vai deixar espaço no entre as quebras.</p>
+        <img src="imagem/CSS/cont-between.png" alt="between">
+        <h3>align-content: space-evenly;</h3>
+        <p>Não vai grudar o primeiro e o último item nas extremidades, mas vai deixar um espaço igual em todo o container.</p>
+        <img src="imagem/CSS/cont-evenly.png" alt="evenly">
+        <h3>align-content: space-around;</h3>
+        <p>Vai dividir o espaço do container e distribuir entre o número quebras e centralizar cada item na sua porção de espaço.</p>
+        <img src="imagem/CSS/cont-around.png" alt="around">
+
+        <h2>Order</h2>
+        <p>Por padrão o valor de todos os elementos é <strong>zero</strong>, mas pode ser alterado fazendo com que seja colocado na ordem crescente, item por item nas CSS, só chamar o elemento na CSS e atribuir o parametro <strong>order:...;</strong></p>
+
+        <h2>Align-self</h2>
+        <p>O Align-self se aplica somente aos itens, o que possibilita fazer personalização no container e ele vai funcionar no <strong>cross-axis</strong>, tem 5 valores que são:</p>
+        <h3>align-self: auto;</h3>
+        <p>Vai herdar a caracterisca de alinhamento vertical do seu pai, seja ele o align-content ou align-items.</p>
+        <h3>align-self: flex-start;</h3>
+        <p>É o alinhamento perto do <strong>cross start.</strong></p>
+        <h3>align-self: flex-end;</h3>
+        <p>É o alinhamento perto do <strong>cross end.</strong></p>
+        <h3>align-self: center;</h3>
+        <p>Que vai calcular o meio entre o <strong>cross start.</strong> e o <strong>cross start.</strong> e vai centralizar.</p>
+        <h3>align-self: stretch;</h3>
+        <p>Que vai esticar.</p>
+        <img src="imagem/CSS/align-self.png" alt="align-self">
 
 
     </main>
