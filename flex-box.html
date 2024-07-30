@@ -114,7 +114,7 @@
         <img src="imagem/CSS/cont-around.png" alt="around">
 
         <h2>Order</h2>
-        <p>Por padrão o valor de todos os elementos é <strong>zero</strong>, mas pode ser alterado fazendo com que seja colocado na ordem crescente, item por item nas CSS, só chamar o elemento na CSS e atribuir o parametro <strong>order:...;</strong></p>
+        <p>Por padrão o valor de todos os elementos é <strong>zero</strong>, mas pode ser alterado fazendo com que seja colocado na ordem crescente, item por item nas CSS, só chamar o elemento <strong>filho</strong> na CSS e atribuir o parametro <strong>order:...;</strong></p>
 
         <h2>Align-self</h2>
         <p>O Align-self se aplica somente aos itens, o que possibilita fazer personalização no container e ele vai funcionar no <strong>cross-axis</strong>, tem 5 valores que são:</p>
@@ -129,6 +129,16 @@
         <h3>align-self: stretch;</h3>
         <p>Que vai esticar.</p>
         <img src="imagem/CSS/align-self.png" alt="align-self">
+
+        <h2>Flex-grow</h2>
+        <p>
+            O flex-grow é utilizado para dimencionar os itens, pode ser uzado no pai, que nesse caso ficariam todos os itens do mesmo tamanho ou pode ser usado separadamente para o filho, basta colocar o comando e adicionar um número. <br> <br>
+            <em>Obs: É meio estranho pois quando acontece uma quebra de linha o tamanho dos itens ficam desproporcionale quando é usado em um único item e a resolução da tela é mudada, vemos que o valor inserido não é mais obedecido.</em>
+        </p>
+
+        <h2>Flex</h2>
+        <p>Podemos passa o comando <strong>flex</strong> como uma porcentagem para os filhos, para decidir o tamanho de cada item, assim podemos fazer personalizar melhor, como no exemploa seguir.</p>
+        <img src="imagem/CSS/flex-puro.png" alt="flex-puro">
 
 
     </main>
