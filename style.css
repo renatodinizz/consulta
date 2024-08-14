@@ -98,3 +98,12 @@ section > ul > li > img.form {
 ul#arrayList {
     line-height: 40px;
 }
+#inline{
+    display: inline;
+}
+#block{
+    display: block;
+}
+#inline-block{
+    display: inline-block;
+}

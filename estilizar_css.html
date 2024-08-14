@@ -21,6 +21,29 @@
 <body>
     <main>
         <h1>Estilizar com CSS</h1>
+        <h2>Seletores</h2>
+        <p>Para configurar as CSS podemos usar varios seletores, que é basicamente a maneira como irá chamar o elemento do HTML na CSS, temos os seletores como: </p>
+        <ul>
+            <li><strong>Seletor global</strong> - Usado para todos os elementos no projeto. <br>Ex: *</li>
+            <li><strong>Seletor de tags</strong> - Usado para selecionar elementos específicos. <br>Ex: h1</li>
+            <li><strong>Seletor de elementos aninhados</strong> - Usado para selecionar elementos que estão dentro de outros elementos. <br>Ex: nav a</li>
+            <li><strong>Seletor de filhos</strong> - Usado para selecionar elementos específicos que estão dentro de outro elemento. <br>Ex: nav > a</li>
+            <li><strong>Seletor de classes</strong> - Usado para selecionar elementos que estão dentro de uma classe especifica. <br>Ex: .nome_da_calsse</li>
+            <li><strong>Seletor de id</strong> - Usado para selecionar elementos que estão identificados com um id. <br>Ex: #nome_do_id</li>
+            <li><strong>Combinação de seletor *</strong> - Usado para selecionar todos os elementos que estão dentro de outro elemento. <br>Ex: secao-pricipal > *</li>
+            <li><strong>Seletor de sequência</strong> - Usado para selecionar um elemento que está depois de outro, no caso do exemplo somente o segundo elementos será selecionado. <br>Ex: h1 + p</li>
+            <li><strong>Seletor de propriedade</strong> - Usado para selecionar um elemento com uma propriedade específica como name, type e etc. <br>Ex: input[type="password"]</li>
+            <li><strong>Seletor de pseudo class</strong> - Usado para selecionar uma pseudo classe. <br>Ex: button:hover</li>
+        </ul>
+        <h3>Sequencia dos seletores</h3>
+        <ul>
+            <li>Seletores Globais</li>
+            <li>Seletores de tipo</li>
+            <li>Combinacao de seletores</li>
+            <li>Seletores de classes</li>
+            <li>Seletores de id</li>
+        </ul>
+
         <h2>Alguns comandos</h2>
         <p>Comandos que eu acho necessário</p>
         <ul>
@@ -29,7 +52,7 @@
             <li>box-shadow - Constroi uma sombra nas bordas <em>Obs: se colocar os dois primeiros valores zerados a sombra fica dos dois lado</em></li>
             <li>text-shadow - Constroi uma sombra no texto</li>
             <li>text-indent - Para adicionar um espaço no parágrafo</li>
-            <li>font-style - Paracolocar em itálico</li>
+            <li>font-style: italic - Paracolocar em itálico</li>
             <li>font-decoration: underline - Para subilinhar um texto</li>
             <li>margin:auto - Para centralizar uma caixa</li>
             <li>Transition-duration - Para evidenciar quando o mouse passar em cima <br>Ex: transition-duration: 0.5s;</li>
@@ -38,7 +61,37 @@
             <li>font-variant: small-caps; - Para colocar todas as letras em maiusculas, dando destaque para as primeiras letras de cada palavra</li>
             <li>Cursor: pointer - O ícone do mouse vira uma mãozinha</li>
             <li>Overflow: hidden - Não deixa o conteúdo passar do limeite</li>
+            <li>letter-spacing: Atribui um espaçamento para todas as letras.</li>
         </ul>
+
+        <h2>Unidades de medidas</h2>
+        <ul>
+            <li><strong>Pixel (px) - </strong>VUnidade fixa, não tem alteração. <br>Ex: 30px - Será 30px independente do tamanho da tela.</li>
+            <li><strong>Root Element (rem) - </strong>Vai alterar conforme o tamanho da raiz do elemento. <br>Ex: 3rem - Vai aumentar 3x o tamanho do elemento.</li>
+            <li><strong>Em (em) - </strong>Vai alterar conforme o tamanho do elemento atual. <br>Ex: 3rem - Vai aumentar 3x o tamanho do elemento.</li>
+            <li><strong>Porcentagem (%) - </strong>Vai alterar percentualmente conforme o tamanho do elemento pai. <br>Ex: 30% - Vai aumentar 30% o tamanho do elemento pai.</li>
+            <li><strong>ViewPort Heigh (vh) - </strong>Vai alterar a altura conforme o tamanho da tela. <br>Ex: 30vh - Vai dimencionar em 30% a altura da tela, sendo ela pequena ou grande.</li>
+            <li><strong>ViewPort Width (vw) - </strong>Vai alterar a largura conforme o tamanho da tela. <br>Ex: 50vh - Vai dimencionar em 50% a largura da tela, sendo ela pequena ou grande.</li>
+        </ul>
+
+        <h2>Display</h2>
+        <p>Display é o modo como o elemnto vai se comportar, veremos os mais usados.</p>
+        <h3>Display: inLine</h3>
+        <p>
+            Sempre vai seguir uma linha, não quebra linha, aceita padding e margin somente horizontal. <br>
+            Este é um exemplo de <span id="inline">elemento inLine</span> em um texto.
+        </p>
+        <h3>Display: Block</h3>
+        <p>
+            Vai ter uma quebra de linha antes e depois, ocupa a largura máxima da tela por padrão e aceita margin e padding vertical e horizontal. <br>
+            Este é um exemplo de <span id="block">elemento block</span> em um texto.
+        </p>
+        <h3>Display: inLine-Block</h3>
+        <p>
+            Ele não permite uma quebra de linha e aceita margin e padding vertical e horizontal. <br>
+            Este é um exemplo de <span id="inline-block">elemento block</span> em um texto.
+        </p>
+
         <h2>Degradê</h2>
         <p>Para acrescentar um degradê use o comando <strong>background-image: linear-gradient()</strong><br>Obs: Dentro dos parênteses indique a direção do degradê como: <strong>to right, to left, to top, to bottom</strong> ou por graus como: <strong>90deg, 45deg</strong> <br>Obs: Depois da direção informe as cores que irão compor o degradê.</p>
         <p>Algumas configurações para o degradê:
@@ -48,12 +101,7 @@
                 <li>Para dimensionar quanto de cada cor - Basta coloar a quantidade em porcentagem depois da cor.</li>
             </ul>
         </p>
-        <h2>Configurações globais da CSS</h2>
-        <p>Para configurar as CSS de maneira global utiliza-se o comando <strong>*</strong> <br>Ex: <pre>
-            * {
-                height: 100%;
-            }
-        </pre></p>
+
         <h2>Importando fontes</h2>
         <p>Para importar uma fonte, basta seguir os passos abaixo:
             <ol>
@@ -108,14 +156,7 @@
             <li>a:hover {text-decoration: underline} - Para adicionar um subilinhadon ao link quando o mouse passar por cima</li>
             <li>a:active {color:yellow} - Para adicionar uma cor assim que clicar no link</li>
         </ul>
-        <h2>Chamando no CSS</h2>
-        <ul>
-            <li># = id</li>
-            <li>. = Classe</li>
-            <li>: = Pseudo Class</li>
-            <li>:: = Pseudo Element</li>
-            <li>> = Children</li>
-        </ul>
+        
         <h2>Variavéis com CSS</h2>
         <ul>
             <li>Crie a marcação <strong>:root{}</strong></li>
