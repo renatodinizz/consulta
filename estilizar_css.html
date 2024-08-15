@@ -35,14 +35,44 @@
             <li><strong>Seletor de propriedade</strong> - Usado para selecionar um elemento com uma propriedade específica como name, type e etc. <br>Ex: input[type="password"]</li>
             <li><strong>Seletor de pseudo class</strong> - Usado para selecionar uma pseudo classe. <br>Ex: button:hover</li>
         </ul>
-        <h3>Sequencia dos seletores</h3>
+        <h3>Sequência dos seletores</h3>
         <ul>
             <li>Seletores Globais</li>
             <li>Seletores de tipo</li>
-            <li>Combinacao de seletores</li>
+            <li>Combinação de seletores</li>
             <li>Seletores de classes</li>
             <li>Seletores de id</li>
+            <li>Estilo em linha</li>
+            <li>!important</li>
         </ul>
+
+        <h2>Seletores Avançado</h2>
+        <p>Podemos usar alguns seletores de forma mais avançadas, isso serve principalmente para quando não se tem acesso ao HTML da aplicação como no caso de usar uma ferramenta como WordPress ou outra parecida.</p>
+        <p>
+            Para selecionar um elemento usamos um seletor avançado, vamos imaginar que queremos selecionar um elemento li que está em uma lista, para esse exemplo vamos usar o comando: <br> 
+            Ex: <strong>li:nth-child(3){}</strong> - Nesse exemplo o li é o item a ser selecionado, nth vem de: number e th da ordem cardial em inglês, child: por que é um filho do elemento ul e o número dentro do parênteses está indicando que dentro da ul o terceiro li será selecionado. <br>
+            <em>Obs: Nesse caso consideramos o primeiro intem como sendo o número 1.</em>
+        </p>
+        <p>
+            Ex: <strong>li:nth-child(2n){}</strong> - Nesse exemplo o n adicional depois do número significa que ele vai pular de dois em dois intem, ou seja, somente números pares, mas podemos substiruir essa expressão pela palavra <strong>even</strong> dentro dos parênteses. <br>
+            Ex: <strong>li:nth-child(2n-1){}</strong> - Nesse exemplo o n adicional depois do número e a expressão significa que ele vai pular de dois em dois intem, mas começando pelo número 2-1 que é 1, ou seja, irá contar somente os números impares, mas podemos substiruir essa expressão pela palavra <strong>odd</strong> dentro dos parênteses.
+        </p>
+        <p>
+            Ex: <strong>li:first-child</strong> - Seleciona o primeiro elemento filho. <br>
+            Ex: <strong>li:last-child</strong> - Seleciona o último elemento filho. <br>
+            Ex: <strong>li:not(first-child)</strong> - Seleciona todos os elementos menos o primeiro. <br>
+        </p>
+        <h3>Pseudos Classe</h3>
+        <p>
+            <strong>:focus:</strong> - Atribui ações quando o elemento recebe um foco, como por exemplo, quando há um clique em  uma caixa de input. <br> <br>
+            <strong>:hover:</strong> - Atribui ações quando o mouse passa por cima do elemento.
+        </p>
+        
+        <h3>Pseudos Elementos</h3>
+        <p>
+            <strong>:: before{contete:"o que irá ser adicionado" ;}</strong> - Atribui um texto, imagem ou símbolo antes do elementos selecionado. <br> <br>
+            <strong>:: after{contete:"o que irá ser adicionado" ;}</strong> - Atribui um texto, imagem ou símbolo depois do elementos selecionado.
+        </p>
 
         <h2>Alguns comandos</h2>
         <p>Comandos que eu acho necessário</p>
