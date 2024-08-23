@@ -26,7 +26,7 @@
 
         <h2>Parâmetros</h2>
         <p>Exemplo de uma função com parametros para identificar se um número é ímpar ou par e retornar na chamada.</p>
-        <img src="imagem/JavaScript/funcao-return.png" alt="função com retorno">
+        <img style="width: 20rem;" src="imagem/JavaScript/funcao-return.png" alt="função com retorno">
         <p>Podemos ter mais que um paramentros. A chamada pode pedir dois parametros ou mais dependendo da necessidade, mas se apenas um parametro for solicitado na chamada como no exemplo, podemos predefinir que se não for passado o parametro 1 ou 2, considerar 0, assim como no exemplo. <br>Por que sem a predefinição usariamos: n1, n2 <br>E não n1=0, n2=0</p>
         <img src="imagem/JavaScript/funcao-param.png" alt="parametros da função">
         <h3>Corrigir erro</h3>
@@ -57,10 +57,33 @@
             <li><strong>onkeyup - </strong>Disparado quando uma tecla é solta sobre o elemento.</li>
             <li><strong>onresize - </strong>Disparado quando há um redimencionamento da janela.</li>
         </ul>
-        <h2>Algumas funcinalidades</h2>
-        <p><strong>variável</strong> - Podemos colocar uma função dentro de uma variável.</p>
+        <h2>Recursividade</h2>
         <p><strong>Recursividade</strong> - Quando uma função tem uma chamada pra ela própria dentro da função. <br>Como no exemplo abaixo que mostra uma função para calcular o fatorial de um número.</p>
         <img src="imagem/JavaScript/funcao-recursividade.png" alt="recursividade em função">
+
+        <h2>Função Anônima</h2>
+        <p>Funções anônimas são funções que não precisam de um nome e que são armazenadas em uma variável, usamos quando queremos ter uma flexibilidade em nossos programas, como mudarmos a forma como ela se comporta. Lembrando que ela só pode ser chamada após a sua criação, diferente de uma função normal, podemos escrever uma função anônima como no exemplo abaixo.</p>
+        <img src="imagem/JavaScript/func-anonima.png" alt="">
+        <p>Ou pode ser escrita dessa outra forma.</p>
+        <img src="imagem/JavaScript/func-anonima-2.png" alt="">
+
+        <h2>High Order Function</h2>
+        <p>
+            Uma High Order Function nada mais é do que uma função que recebe como parâmetro outra função, tem que se atentar muito em como a função está escalonando com outra.
+        </p>
+        <h3>forEach</h3>
+        <img src="imagem/JavaScript/for-function.png" alt="">
+        <p>Nesse exemplo, a função exibirElemento irá mostrar os elementos de um array que é nossa lista, o for chama a função exibirElemento, e passa como parâmetro cada elemento que é o lista[i], depois passa o índice e por último o array como todo.</p>
+        <p>Todo esse código acima pode ser substituído por uma simples expressão como:</p>
+        <img src="imagem/JavaScript/for-each.png" alt="">
+        <p>Resumindo o que ele faz é exatamente como o próprio nome da função, <strong>para cada elemento ...</strong> e chama a função desejada.</p>
+
+        <h3>map</h3>
+        <p>Primeiro vou colocar o código passo a passo, para depois mostrar o modo simplificado.</p>
+        <img src="imagem/JavaScript/for-map.png" alt="">
+        Agora vamos ver o modo <strong>map</strong> para simplificar todo esse código.
+        <img src="imagem/JavaScript/map.png" alt="">
+
     </main>
     <h3>Página principal!</h3>
     <a href="index.html"><img src="imagem/home.png" alt="home"></a>
