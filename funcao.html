@@ -78,58 +78,6 @@
             A função criada dentro da High Order, é uma função anônima e pode ser substituida, ela só exige que dois parâmetros sejam passados e as funções criadas obedecem essa exigência.
         </p>
 
-        <h2>Métodos em Arrays</h2>
-        <p>São modo de interação com os arrays, objetos e high-order. Pedem como parâmetros um value, indice e o própeio array, é muito comum utilizar somente o value.</p>
-        <h3>forEach</h3>
-        <img src="imagem/JavaScript/for-function.png" alt="">
-        <p>Nesse exemplo, a função exibirElemento irá mostrar os elementos de um array que é nossa lista, o for chama a função exibirElemento, e passa como parâmetro cada elemento que é o lista[i], depois passa o índice e por último o array como todo.</p>
-        <p>Todo esse código acima pode ser substituído por uma simples expressão como:</p>
-        <img src="imagem/JavaScript/for-each.png" alt="">
-        <p>Resumindo, ele faz exatamente como o próprio nome da função diz, <strong>para cada elemento ...</strong> e depois chama a função desejada.</p>
-
-        <h3>map</h3>
-        <p>É utilizado para fazer uma transformação em um array, mapeando cada elemento de um array antigo para um novo, é como se ele copiasse um array para um novo array.</p>
-        <p>Primeiro vou colocar o código passo a passo, para depois mostrar o modo simplificado.</p>
-        <img src="imagem/JavaScript/for-map.png" alt="">
-        <p>Agora vamos ver o modo <strong>map</strong> para simplificar todo esse código. O return é como se tivesse fazendo um push para o array, como no exemplo acima.</p>
-        <img src="imagem/JavaScript/map.png" alt="">
-
-        <h3>Filter</h3>
-        <p>Utilizado para filtrar elementos de um array, seleciona elementos específicos e cria um novo array, vou colocar um exmeplo de código com a mesma função, porém sem usar o comando filter.</p>
-        <img src="imagem/JavaScript/filter-no.png" alt="">
-        <p>Agora vamos ver o comando simples que é utlizando o filter, e obteremos o mesmo resultado, só usamor o value como parâmetro, a condição utilizada no return é a condição utilizada para fazer a filtragem.</p>
-        <img src="imagem/JavaScript/filter-yes.png" alt="">
-
-        <h3>Reduce</h3>
-        <p>Utilizado para transformar um array em um outro elemento, seja um array ou um objeto, um número, uma string, qualquer coisa. Ele é diferentedos outros, ele acumula valores, vai acumulando valor do elemento anterior. Ele possui 4 parâmetros e não 3 como antes, o primeiro que le recebe é o valor da interação antertior, e os outros como das outros métodos. O return nesse caso vai passar o valor para a próxima interação, assim conseguimos a cada interação somar o valor da interação anterior acumulado com o elemento atual. <br>
-        Nesse exemplo, o número 0 é o segundo parâmetro exigido pelo reduce, que é o mesmo que o valor inicial.</p>
-        <img src="imagem/JavaScript/reduce.png" alt="">
-
-        <p>Pode-se também com reduce reorganizar dados para uma melhor organização do código, vou colocar um exmeplo abaixo de como utilizar o reduce para organizar melhor os dados.</p>
-        <img style="width: 50rem;" src="imagem/JavaScript/reduce2.png" alt="">
-        <p>Nesse exemplo, tinhamos um array com vários objetos, e usamos o reduce para separar por raça. O segundo parâmetro foi um objeto vazio, vou me esforçar para ler esse código de maneira clara.</p>
-        <p>
-            Cria o método reduce, passa uma função anônima que verifica se o a raça do personagem for verdade, ele vai dar um push no personagem e armazenar, se for falso, ou seja, de outra raça, ele vai criar um novo array para cada raça e vai separar e armazenar.
-        </p>
-
-        <h3>Sort</h3>
-        <p>
-            Utilizadopara ordenar arrays em ordem alfabética e numerica. O sort ele altera o array original, então é bom lembrar desse detalhe.
-        </p>
-        <p>
-            Como se utilizar o sort: <br>
-            Vamos utilizar uma função de callback e passar dois parâmetros, que podem ser a e b, por que o sort vai fazer uma comparação entre dois elementos qual deles ele vai precisar colocar na frente, depois disso ele vai comparar o último elemento comparado com o próximo e assim até finalizar o array.
-        </p>
-        <p>
-            O return se comporta diferente, ele tem que devolver um número negativo e outro positivo, para fazer a comparação. Em um cenário onde quero que seja ordenado numericamente, posso passar a - b, assim ele vai calcular, se der o resultado negativo ele sabe que precisa colocar o <strong>a</strong> começo do array e se for positivo o <strong>b</strong> para o final. Para fazer de forma decrescente basta colocar o return b - a.
-        </p>
-        <p>
-            <em>
-                Uma dica para que o array não seja modificado e se mantenha original, é usar o <strong>slice</strong> sem nenhum parâmetro, assim ele vai criar uma cópia do array de todos os elementos e ai vamos passar a cópia e não mais o array original, com isso conseguimos armazenar em um novo array, como na imagem abaixo.
-            </em>
-        </p>
-        <img style="width: 50rem;" src="imagem/JavaScript/sort.png" alt="">
-
     </main>
     <h3>Página principal!</h3>
     <a href="index.html"><img src="imagem/home.png" alt="home"></a>
