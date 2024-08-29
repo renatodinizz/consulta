@@ -15,27 +15,89 @@
         <img class="imagem-js-vertical" src="imagem/JavaScript/arvore-dom.png" alt="arv-dom">
 
         <h2>Selecionando elementos</h2>
-        <p>Para selecinar elementos, podemos selecinar por: <br><strong>Marca</strong><br><strong>ID</strong><br><strong>Nome</strong><br><strong>Classe</strong><br><strong>Seletor</strong>
+        <p>Para selecinar elementos, podemos selecinar por: <br><strong>Tag</strong><br><strong>ID</strong><br><strong>Name</strong><br><strong>Class</strong><br><strong>Selector</strong>
         </p>
         <h3>Selecionar por marca</h3>
         <p>
             Para selecionar por marca, usamos o comando: <strong>window.document.getElementsByTagName('p')[1]</strong> <br>
-            Neste caso, o comando indica que o elemento a ser selecionado é uma tag. <br>Dentro do paragráfo está especidficando qual tag será selecionada <br>O colchetes está indicando qual dentre os paragráfos será selecionado.
+            Neste caso, o comando indica que o elemento a ser selecionado é uma tag. <br>Dentro do parentese está especificando qual tag será selecionada (parágrafo) <br>O colchetes está indicando qual dentre os parágrafos será selecionado.
         </p>
         <h3>Selecionar por ID</h3>
         <p>Para selecionar por ID, usamos o comando: <strong>window.document.getElementById()</strong></p>
-        <h3>Selecionar por nome</h3>
-        <p>Para selecionar por nome, usamos o comando: <strong>window.document.getElementsByName()[]</strong></p>
-        <h3>Selecionar por classe</h3>
-        <p>Para selecionar por classe, usamos o comando: <strong>window.document.getElementsByClassName()[]</strong></p>
-        <h3>Selecionar por seletor</h3>
-        <p>Para selecionar por seletor, usamos o comando: <br> <strong>window.document.querySelector('div.tag') ou ('id#tag')</strong><br> ou o comando: <br> <strong>window.document.querySelectorAll('div.tag') ou ('id#tag')</strong></p>
+        <h3>Selecionar por name</h3>
+        <p>Para selecionar por name, usamos o comando: <strong>window.document.getElementsByName()[]</strong></p>
+        <h3>Selecionar por class</h3>
+        <p>Para selecionar por class, usamos o comando: <strong>window.document.getElementsByClassName()[]</strong></p>
+        <h3>Selecionar por selector</h3>
+        <p>Para selecionar por selector, usamos o comando: <br> <strong>window.document.querySelector('div.tag') ou ('id#tag')</strong><br> ou o comando: <br> <strong>window.document.querySelectorAll('div.tag') ou ('id#tag') ou (#lista > li > label)</strong> <br>Para selecionar mais de um elemento, por exemplo, selecionar varios itens dentro de uma lista.</p>
 
-        <h2>Alguns outros comandos com DOM</h2>
+        <h2>Outra maneira de enviar valores</h2>
+        <p>Vamos ver aqui outra maneira de enviar valores para o DOM, fazendo a mesma interação como por seletores ou id.</p>
+        <p>Nessa primeira imagem, a única coisa de diferente é ao chamar a função com onclick, ele passa um parâmetro que a função exigia, nesse caso o parâmetro <strong>this.parentNode</strong> quer dizer... <em>Este elemento, o nó pai</em> que no caso seria a section, então ele manda para o DOM toda a section.</p>
+        <img style="width: 50rem;" src="imagem/JavaScript/parent-node.png" alt="">
+        <p>Já nessa outra imagem ele cria variáveis como antes, porém ele busca o elementos passado que no caso é a <strong>section</strong> e pede o <strong>children(filhos)</strong>, depois dentre todos os filhos ele declara qual elemento filho buscar pelo <strong>id</strong> e por último solicita o valor daquele elemento.</p>
+        <img style="width: 50rem;" src="imagem/JavaScript/parent-node2.png" alt="">
+
+        <h2>Criando elementos</h2>
+        <p>Para criar elementos usamos o comando document.createElement('li'), document se referindo ao documento HTML, createElement é o comando responsavél por criar o elemento e dentro dos parentese e das aspas informamos a tag que desejamos criar, como no exemplo:</p>
+        <img src="imagem/JavaScript/creat-dom.png" alt="">
+        <p>Podemos declarar a variável com um ponto para dar um id, class, name, type e etc. <br>O innerTextvai inserir o conteúdo dentro do li</p>
+        <h3>innerText ou innerHTML</h3>
+        <p>A innerHTML permite o uso de tags direto no JavaScript, isso pode ser perigoso, pode abrir brecha na segurança pois uma pessoa mal intencionada poderia modificar as tags e colocar um script ou algo assim nas tags. O innerText adiciona um texto, como se estivesse inserindo um texto dentro da tag p ou h1.</p>
+
+        <h2>Adicionando elementos como novo nó com DOM</h2>
+        <h3>appendChild</h3>
+        <p>Para adicionar elementos dentro do HTML com o uso do DOM precisamos entender o conceito de pai e filho na programação. Usamos o comando appednChild(), e dentro dos parenteses informamos o filho da variável que declaramos.</p>
+        <img src="imagem/JavaScript/append.png" alt="">
+        <p>Nesse exemplo, o elemento <strong>li</strong> que foi criado ou poderia ter sido um elemento modificado também, vai receber como filho o elemento criado que é um <strong>input</strong>. Já o elemento <strong>ul</strong> que foi criado com HTML e inserido por getElementById vai receber como filho o elemento <strong>newLi</strong> que foi o elemento criado acima. </p>
+        <h3>Append</h3>
+        <p>Quase o mesmo que o appendChild, porém permite inserir vários elementos de uma só vez.</p>
+        <img src="imagem/JavaScript/append2.png" alt="">
+
+        <h2>Remover elementos como novo nó com DOM</h2>
+        <h3>removeChild</h3>
+        <p>Para remover elementos é basicamente o mesmo procedimento, declara o elemento, usa o comando <strong>removeChild</strong> e informa qual o filho será removido, como na imagem abaixo.</p>
+        <img src="imagem/JavaScript/remove.png" alt="">
+        <p>Nesse exemplo, com o comando variável[variável.length -1] ele vai remover o último elemento que seria o último h3 e ul.
+        </p>
+        <h3>Remove</h3>
+        <p>Para usar o remove não precisa declara quem é o pai e quem é o filho, basta chamar o remove logo depois do elemento que deseja remover, vou deixar uma imagem abaixo para melhor explicar.</p>
+        <img style="width: 50rem;" src="imagem/JavaScript/remove2.png" alt="">
+
+        <h2>Alguns exemplos com DOM</h2>
         <ul>
-            <li><strong>p1.style.color - </strong>Muda a cor da variável.</li>
+            <li><strong>p1.style.color - </strong>Muda a cor do elemento.</li>
             <li><strong>document.body.style.background - </strong>Muda a cor da de fundo.</li>
         </ul>
+
+        <h2>Eventos</h2>
+        <ul>
+            <li><strong>onmouseenter - </strong>Disparado quando o mouse entrar no conteúdo.</li>
+            <li><strong>onmouseout - </strong>Disparado quando o mouse sair do conteúdo.</li>
+            <li><strong>onmousemove - </strong>Disparado quando o mouse mover dentro do conteúdo.</li>
+            <li><strong>onmousedown - </strong>Disparado quando o usuário clica e segura o  mouse no conteúdo.</li>
+            <li><strong>onmouseup - </strong>Disparado quando o usuário soltar o mouse que tinha sido clicado e segurado.</li>
+            <li><strong>onclick - </strong>Disparado quando o mouse clica no conteúdo.</li>
+            <li><strong>onload - </strong>Disparado quando a página é carregada.</li>
+            <li><strong>ondblclick - </strong>Disparado com o duplo clique do mouse.</li>
+            <li><strong>onfocus - </strong>Disparado quando o input recebe um foco, ou seja, quando se clica no input.</li>
+            <li><strong>onblur - </strong>Disparado quando o sai do foco, no caso de um input, quando se sai do campo.</li>
+            <li><strong>onchange - </strong>Disparado quando ocorre uma mudança, por exemplo, quando seleciona outro item dentro de um select.</li>            
+            <li><strong>onkeydown - </strong>Disparado quando uma tecla é pressionada.</li>
+            <li><strong>onkeypress - </strong>Disparado quando uma tecla é pressionada e solta.</li>
+            <li><strong>onkeyup - </strong>Disparado quando uma tecla é solta sobre o elemento.</li>
+            <li><strong>onresize - </strong>Disparado quando há um redimencionamento da janela.</li>
+        </ul>
+
+        <h2>addEventListener</h2>
+        <p>Podemos chamar eventos no HTML, como já vimos antes, mas para adicionar eventos com JavaScript podemos usar o <strong>addEventListener</strong> que fica ouvindo ou esperando esses eventos acontecerem, o primeiro parâmetro que é preciso passar é uma string dizendo qual evento queremos adicionar, nesse caso sem o prefixo on, o segundo parâmetro é uma função de callback</p>
+        <img style="width: 50rem;" src="imagem/JavaScript/add-event.png" alt="">
+        <p>Nesse exemplo, ele chama o botão pelo id para o DOM, adicionar um evento no botão de forma dinâmica, cria uma função que tem como parâmetro um evento sendo abreviado de ev, busca outros elementos através do ev que foi adicionado no botão, ele chama pelo pai que é uma section, pr isso a variável sectionElement, que foi somente para não ficar enorme o modo de buscar para o DOM.</p>
+        <p>Resumindo... ficaria assim <strong>const userName = ev.currentTarget.parentNode.children.username.value</strong> que explicando ficaria...Uma variável que armazena recebe = o evento | que está no botão | seu pai(section) | seus filhos(os filhos da section) | username | seu valor</p>
+
+        <h2>removeEventListener</h2>
+        <p>Estou dizendo que eu quero remover um tipo de evento que seja do tiop click e que tenha uma função register, ele tem uma caracterisca que ele remove, desabilita o addEventListener</p>
+        <img src="imagem/JavaScript/remove-event.png" alt="">
         
     </main>
     <h3>Página principal!</h3>
