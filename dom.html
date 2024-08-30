@@ -94,6 +94,9 @@
         <img style="width: 50rem;" src="imagem/JavaScript/add-event.png" alt="">
         <p>Nesse exemplo, ele chama o botão pelo id para o DOM, adicionar um evento no botão de forma dinâmica, cria uma função que tem como parâmetro um evento sendo abreviado de ev, busca outros elementos através do ev que foi adicionado no botão, ele chama pelo pai que é uma section, pr isso a variável sectionElement, que foi somente para não ficar enorme o modo de buscar para o DOM.</p>
         <p>Resumindo... ficaria assim <strong>const userName = ev.currentTarget.parentNode.children.username.value</strong> que explicando ficaria...Uma variável que armazena recebe = o evento | que está no botão | seu pai(section) | seus filhos(os filhos da section) | username | seu valor</p>
+        <hr>
+        <p>Para alguns casos quando trabalhamos com eventos podemos observar que o navegador tem um comportamento estranho, não carregando a página e não enviando os dados de maneira correta, isso pode ocorrer com alguns eventos e para evitar esse tipo de situação vamos usar um comando que vai fazer toda a diferernça, basta chamar a função do evento ou o addEventListener e adicionar o <strong>preventDeFault()</strong> </p>
+        <img src="imagem/JavaScript/prevent.png" alt="">
 
         <h2>removeEventListener</h2>
         <p>Estou dizendo que eu quero remover um tipo de evento que seja do tiop click e que tenha uma função register, ele tem uma caracterisca que ele remove, desabilita o addEventListener</p>
