@@ -58,11 +58,21 @@
             <h2>Cortar</h2>
             <li>
                 <p><strong>num.slice(0, 3,)</strong> - Esse comando faz um corte no array, criando assim um novo array, é como se eu falasse... A partir da posição 0, pegue 3 itens, e você pode salvar em um array.</p> 
-                <img src="imagem/JavaScript/criar-array-existente.png" alt="criar array já existente">
-                <p>Nesse caso, o novo Array pegaria alguns elementos usando o comando <strong>slice</strong>, o primeiro parametro indica a posição inicial que será acrescentado, o segundo parametro indica a posição final a ser adicionado. <em>lembrando que o último parametro não é adicionado a posição indicada mas sim uma antes.</em></p>
+                    <img src="imagem/JavaScript/criar-array-existente.png" alt="criar array já existente">
+                    <p>Nesse caso, o novo Array pegaria alguns elementos usando o comando <strong>slice</strong>, o primeiro parametro indica a posição inicial que será acrescentado, o segundo parametro indica a posição final a ser adicionado. <em>lembrando que o último parametro não é adicionado a posição indicada mas sim uma antes.</em>
+                </p>
             </li>
             <li>
-                <strong>num.slice(-3,)</strong> - Esse comando faz um corte no array, como eu coloquei um parametro negativo, ele vai pegar o último elemento que é -1, e contar, o penúltimo será -2, até chegar no elemento desejado, e como não passsei o segundo parametro entende-se que ele vai cortar do elemento selecionado até o último.
+                <p>
+                    <strong>num.slice(-3,)</strong> - Esse comando faz um corte no array, como eu coloquei um parametro negativo, ele vai pegar o último elemento que é -1, e contar, o penúltimo será -2, até chegar no elemento desejado, e como não passsei o segundo parametro entende-se que ele vai cortar do elemento selecionado até o último.                     
+                </p>
+                <p>Exemplo:</p>
+                <img src="imagem/JavaScript/slice2.png" alt="">
+                <p>
+                    Neste exemplo estamos incrementando a função da tecla <strong>Backspace</strong>, aqui cortamos desde o item 0 do array, ou seja, o primeiro item até o -1 que é o último, com a diferença que o último item é excluído, então pegamos o primeiro item até o penúltimo.
+                </p>
+                
+
             </li>
             
             <h2>Concatenar</h2>
@@ -170,6 +180,16 @@
         <p>Utilizado para percorrer um array e retornar true caso o item procurado exista no array e false caso não exista, muito útil para fazer pesquisas rápidas.</p>
         <img src="imagem/JavaScript/include.png" alt="">
         <p>Nesse exemplo, pode-se ler da seguinte maneira, no array latinhas, existe um item chamado colecao-especial, a partir da posição 2?</p>
+
+        <p>
+            <strong>Exemplo real</strong><br>
+            <img src="imagem/JavaScript/includes2.png" alt=""> <br>
+            Neste exemplo queremos limitar as teclas que o usuário pode apertar. Podemos ler o if da seguinte maneira... Se a tecla que o usuário presionar estiver incluida no array acima, pegue o valor do input e concatena com a tecla pressionada e retorna esse valor. 
+        </p>
+
+        <h3>Split</h3>
+        <p>Utilizado para dividir uma string transformando ela em um array, a partir de um caracter específico da string, nesse caso o ponto, então sempre que esse caracter acontecer, seria como se ele quebrasse a string em um diferente ponto do array, como mostra o exemplo no comentário do código.</p>
+        <img src="imagem/JavaScript/split.png" alt="">
 
         <h3>Reverse</h3>
         <p>Utilizado para reverter a ordem do array, muito utilizado em filtros para colocar na ordem de z - a ou maior para menor.</p>

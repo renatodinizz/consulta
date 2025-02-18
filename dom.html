@@ -100,14 +100,37 @@
         <p>Para prevenir que o formulário atualize e não salve as iformações, basta adicionar o comando:</p>
         <img src="imagem/JavaScript/preventddefault.png" alt="prevent defalt">
 
+        <h2>Selecionando inputs com DOM</h2>
+        <p>Vamos ver como selecionar inputs com o DOM, cada input da sua maneira.</p>
+        <h3>input text</h3>
+        <img src="imagem/JavaScript/input-text.png" alt="" class="mdq">
+        <h3>input select</h3>
+        <img src="imagem/JavaScript/input-select.png" alt="" class="mdq">
+        <h3>input radio</h3>
+        <img src="imagem/JavaScript/input-radio.png" alt="" class="mdq">
+        <h3>input check box</h3>
+        <img src="imagem/JavaScript/input-checkbox.png" alt="" class="mdq">
+        <p>
+            Criamos uma variável vazia, depois seleciona todos os inputs com o querySelectorAll, adicionamos <strong>:checked </strong> para selecionar somente osque foram marcados, o querySelectorAll devolve uma nodeList, que permite usar o forEach e passar uma função de callback. <br>
+            Neste exemplo, para cada item selecionado, vamos estar concatenando uma string na variável que foi criada.
+        </p>
+
         <h2>Dom com CSS</h2>
         <h3>Estilizar com CSS</h3>
         <p>
             Para usar CSS utilizando o DOM, basta direcionar para a página do documento, depois direcionar onde será aplicado o estilo, usar a palavra reservada <strong>style</strong> e então declarar a mudança que deseja fazer, como no exemplo abaixo.<br>
-            <strong>document.body.style.background = 'blue'</strong>
-            
+            <strong>document.body.style.background = 'blue'</strong>            
         </p>
         <img src="imagem/JavaScript/cssComDOM.png" alt="dom utilizando css">
+
+        <h3>Adicionando e removendo classes</h3>
+        <p>Podemos criar uma classe em CSS e adicionar de forma dinâmica usando JavaScript, como no exemplo abaixo.</p>
+        <p>Criando a classe em CSS</p>
+        <img src="imagem/JavaScript/classe1.png" alt="">
+        <p>Adicionando a classe.</p>
+        <img src="imagem/JavaScript/classe3.png" alt="">
+        <p>Removendo a classe</p>
+        <img src="imagem/JavaScript/classe2.png" alt="">
 
         <h3>Trocar de temas</h3>
         <p>
@@ -117,6 +140,17 @@
         <img src="imagem/JavaScript/toggle.png" alt="toggle">
         <p>Nesse exemplo, temos o body com uma classe que é a is-light, e as duas classes estão especificadas nas CSS, e o toggle alterna entre as duas.</p>
 
+        <h3>Outra maneira de trocar tema</h3>
+        <p>O root que temos em CSS</p>
+        <img src="imagem/JavaScript/alterarTema1.png" alt="">
+        <p>Importando o root para o JavaScript.</p>
+        <img src="imagem/JavaScript/alterarTema2.png" alt="">
+        <p>Temos a tag main com atributo data, para que possamos saber qual o tema atual.</p>
+        <img src="imagem/JavaScript/alterarTema4.png" alt="">
+        <p>Importando o main para o JavaScript.</p>
+        <img src="imagem/JavaScript/alterarTema5.png" alt="">
+        <p>Acessando as propriedades do através do atributo setProperty. Informando também que a o thema foi alterado na ultima linha do if.</p>
+        <img src="imagem/JavaScript/alterarTema3.png" alt="" class="mdq">
 
         <h2>Manipulação de atributos com JavaScript</h2>
         <h3>Alternando atributos</h3>
@@ -129,7 +163,6 @@
         <img src="imagem/JavaScript/alternar.png" alt="alternar" class="mdq">
 
         <h3>getAttribute</h3>
-
         <p>
             Para atribuir ou modificar um valor temos o exemplo abaixo, onde o método é acionado para pegar o atributo que foi passado, a diferença que o .value vai pegar o valor em tempo real enquanto o getAttribute pega o valor pre definido no  HTML.
         </p>
