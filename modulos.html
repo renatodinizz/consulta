@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagem/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <h1>Módulos</h1>
+        <h2>CommonJS</h2>
+        <p>Serve para organizar melhor os projetos e ter como fazer uma manutenção melhor. Ele não é suportado por padrão nos navegadores, no Node ele é a forma padrão.</p>
+        <p>
+            Eu preciso primeiro dizer que quero deixar essa parte do codigo disponivél para ser exportado, da seguinte maneira. <br>
+            <strong>module.exports = nomeDoArquivo</strong> <br>
+            <img src="imagem/JavaScript/common1.png" alt=""> <br>
+            E no arquivo onde eu vou importar, eu declaro uma variável e passo o caminho do arquivo da seguinte forma. <br>
+            <img src="imagem/JavaScript/common2.png" alt="">
+        </p>
+
+        <h2>ES Modules</h2>
+
+        <h3>Inline</h3>
+        <p>
+            Para trabalhar com modularização com os navegadores precisamos colocar a palavra reservada export antes da função ou variável que queremos exportar <br>
+            <img src="imagem/JavaScript/es1.png" alt=""> <br>
+            Aí precisamos importar no arquivo principal, usando a palavra import e entre chaves o nome do que queremos importar, a palavra from e o caminho onde está o que queremos importar. <br>
+            <img src="imagem/JavaScript/es2.png" alt=""> <br>
+            Mas isso não é tudo, precisamos declarar no html, na tag script que queremos trabalhar com modulos, usando o parametro type. <br>
+            <img src="imagem/JavaScript/es3.png" alt="">
+        </p>
+
+        <h3>Inline Default</h3>
+        <p>
+            Muito parecido com o modulo inline, precisamos colocar a palavra reservada export default antes da função ou variável que queremos exportar. <br>
+            Obs: Só pode haver um por arquivo. <br>
+            Ainda é preciso delcarar que queremos trabalhar com modulos na tag script. <br>
+            <img src="imagem/JavaScript/expdef1.png" alt=""><br>
+            Não precisamos usar as chaves para declarar. A diferença principal é que conseguimos renomear de forma simples, podendo assim corrigir algum conflito de nome. <br>
+            <img src="imagem/JavaScript/expdef2.png" alt="">
+        </p>
+
+        <h3>Dicas</h3>
+        <p>
+            Ao invés de colocar a palavra export na frente de cada variável, podemos colocar a palavra reservado ao final ou início do arquivo como opção de melhor organização, no caso do export, basta abrir as chaves e separar o que deseja exportar por vírgula. <br>
+            <img src="imagem/JavaScript/es4.png" alt=""> <br>
+            Podemos importar o export default e o export na mesma linha, separando por vírgula. <br>
+            <img src="imagem/JavaScript/es5.png" alt="">
+        </p>
+
+
+    </main>
+    <h3>Página principal!</h3>
+    <a href="index.html"><img src="imagem/home.png" alt="home"></a>
+</body>
+</html>

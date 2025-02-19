@@ -80,6 +80,26 @@
             <li>Operadores relacionais - Não possuem uma ordem entre eles.</li>
             <li>Operadores lógicos - Na ordem correta.</li>                
         </ol>
+
+        <h2>Operador de Encadeamento Opcional</h2>
+        <p>
+            Neste exemplo, a propriedade phone não existe dentro de friends, sendo assim o JavaScript dá um erro, por que ele le phone como undefined e por isso não consegue ler a propriedade ddd, para corrigir isso com o operador de encadeamento opcional, basta colocar um ponto de interrogação ?, que assim ele vai verificar se aquela propriedade existe, ai sim se ela existir ele continua e se não existir, ele devolve undefined. <br>
+            <img src="imagem/JavaScript/encadeamento.png" alt=""> <br>
+            Na primeira linha comentada é como usariamos de forma original <br>
+            Na segunda seria usado somente onde teriamos dúvida. <br>
+            Na terceira em todo o comando. <br>
+            E na quarta, um exemplo de como utilizar com array.
+        </p>
+
+        <h2>Operador de Coalescência Nula</h2>
+        <p>No JavaScript o operador ou || define os valores em valores boleanos, para o || false é false, 0 é false, null é false e undefined é false. Já o operador de coalescencia nula só define como false quando é null ou undefined e assim que ele encontra um valor true, ele para a verificação e retorna o valor encontrado, pode ser usado com operações lógicas como no if ou para atribuições de valores padrão.</p>
+        <p>
+            <img src="imagem/JavaScript/oppnull.png" alt=""> <br>
+            Nesse exemplo, o primeiro console vai retornar o valor de a como 0 e o valor de b sendo 42, por que o operador || considera 0 como false, então ele substitui o valor de b. <br>
+            O segundo console vai retornar o valor de a como 0 e o valor de b sendo 0, por que o operador ?? considera 0 como true, então ele atribui o valor de a para b normalmente. 
+        </p>
+
+
     </main>
     <h3>Página principal!</h3>
     <a href="index.html"><img src="imagem/home.png" alt="home"></a>
