@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armazenar Recursos no Navegador</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagem/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <h1>Armazenar Recursos no Navegador</h1>
+
+        <h2>Session Storage</h2>
+        <p>Para armazenar ou acessar podemos fazer usando o <strong>window.sessionStorage</strong> ou simplesmente <strong>sessionStorage</strong>, e ele é um objeto que tem alguns métodos. E trabalha como objeto tendo usando chave e valor. Para verificar basta ir no console, depois na seta e procurar por aplicação ou aplication e ao lado em Storage.</p>
+
+        <h2>Local Storage</h2>
+        <p>Para armazenar ou acessar podemos fazer usando o <strong>window.localStorage</strong> ou simplesmente <strong>localStorage</strong>, e ele é um objeto que tem alguns métodos. E trabalha como objeto tendo usando chave e valor, a diferença que é o valor armazenado vai permanecer memso se eu fechar a aba ou o navegador e só irá ser removida de forma manual na aplicação.</p>
+
+        <h2>Métodos para Session Storage ou Local Storage</h2>
+
+        <h3>Clear</h3>
+        <p>Remove todos os pares de chaves e valores.</p>
+
+        <h3>getItem</h3>
+        <p>
+            Pegue um item a partir da sua chave. <br>
+            <img src="imagem/JavaScript/getItem.png" alt=""> <br>
+            Basta informar o nome da chave para a informação poder ser lida.
+        </p>
+
+        <h3>Key</h3>
+        <p>Retorna um nome de uma determinada chave.</p>
+
+        <h3>Lenght</h3>
+        <p>Retorna o tamanho, ou seja, a quantidade de chaves.</p>
+
+        <h3>removeItem</h3>
+        <p>Remove um item.</p>
+
+        <h3>setItem</h3>
+        <p>
+            Serve para atribuir um item. <br>
+            <img src="imagem/JavaScript/sessionstorage.png" alt="">
+            <br>
+            o primeiro é o nome da chave que queremos e o sergundo é o valor que que irá ser atribuido para ela.
+        </p>
+
+        <h2>Cookies</h2>
+        <p>
+            Para salvar uma informação com cookie precisa necessariamente ser em formanto de string, no exemplo abaixo, foi dividida em 3 variáveis, mas somente para melhor entendimento. <br>
+            Nome do cookie = valor ; <br>
+            Aí podemos passar outras infomrações como data expirante(no fomrato UTCStringDate) ou path que é o caminho que o cookie vai ficar disponível, a / significa que ele vai ficar disponível todo o caminho.
+        </p>
+        <img src="imagem/JavaScript/cookies.png" alt="">
+        
+    </main>
+    <h3>Página principal!</h3>
+    <a href="index.html"><img src="imagem/home.png" alt="home"></a>
+</body>
+</html>
