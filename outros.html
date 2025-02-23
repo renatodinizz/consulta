@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outros</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagem/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <h2>NPM - Node Package Manager</h2>
+        <p>Um gerenciador de pacotes que serve para compartilhar, baixar e gerenciar os modulos.</p>
+        <h3>Selecionar a pasta e inicializar</h3>
+        <p>
+            Para inciar, basta no terminal inserir o comando... cd + a pasta desejada. <br>
+            <img src="imagem/JavaScript/npm1.png" alt=""> <br>
+            E para inciar um projeto usamos o comando npm init, assim vamos estar falando para o npm que queremos inicar um projeto nessa página. <br>
+            <img src="imagem/JavaScript/npm2.png" alt="" class="mdq"> <br>
+            E então ele pede algumas informações como o nome do projeto, versão, descrição, ponto de entrada, comando de teste, repositório git, palavras chaves, autor e licença, precisa confirmar as informações com um yes. <br>
+            Podemos também utilizar o comando init -y para ele pular toas essas perguntas e clocar a resposta padrão. <br>
+            depois disso ele vai criar um arquivo package.json que vai ser o arquivo principal do nosso projeto, sempre que fomos instalar alguma coisa, vai ficar salvo no arquivo.           
+            
+        </p>
+        
+        <h3>instalar</h3>
+        <p>
+            Para instalar, podemos usar como referenia  o site do npm, procurar pela aplicação que queremos e usar o comando bem simples para instalar. <br>
+            <img src="imagem/JavaScript/npm3.png" alt=""> <br>
+            Essa imagem diz que foi instalado 1 pacote e foi auditado 2 pacotes e foi encontrado 0 vunerabilidade. <br>
+            Após isso ele vai criar outro arquivo chamado package.lock que ele irá fazer uma trava nas versões das aplicações que instalamos, e ele criou também uma pastas onde vai ficar os arquivos que baixamos.
+        </p>
+        <h3>Como usar</h3>
+        <p>
+            Pra usar é importante que o arquivo esteja dentro da pasta do projeto, no caso da nova pasta que foi criada. E temos que usar como se fossemos importar um modulo usando o commonJS, como na imagem abaixo. <br>
+            <img src="imagem/JavaScript/npm5.png" alt=""> <br>
+            E para verificar usamos nesse exemplo o terminal e a saída que obtivemos foi... <br>
+            
+            <img src="imagem/JavaScript/npm6.png" alt="">
+        </p>
+
+        <h3>Dependencias de desenvolvimento</h3>
+        <p>
+            Dependencia de desenvolvimento, é usada somente para ajudar no desenvolvimento mas não para ser salva junto com o projeto,  para que seja incluido somente o que for necessário. <br>
+            <img src="imagem/JavaScript/npm7.png" alt="" class="mdq">
+
+        </p>
+
+        <h3>Dependencias globais</h3>
+        <p>
+            Pra instalar dependencias globais, isso significa que não vai instalar em qualquer projeto mas sim na sua máquina, como se fosse um programa. <br>
+            <img src="imagem/JavaScript/npm8.png" alt="">
+
+        </p>
+
+        <h3>Desisntalar</h3>
+        <p>
+            Para remover basta usar o comando com o na imagem abaixo. <br>
+            <img src="imagem/JavaScript/npm9.png" alt="">
+        </p>
+
+        <h3>Scripts no NPM</h3>
+        <p>
+            Estão no arquivo package json, entre aspas e podemos executar qualquer outro comando, é como se fosse um atalho.
+        </p>
+        <p>
+            Podemos colocar um script para executar um npx como no primeiro exemplo, ou para executar qualquer comando grande criando um atalho, no segundo exemplo estar criando um atalho para executar o código. <br>
+            <img src="imagem/JavaScript/scripts1.png" alt=""> <br>
+            E para usar o atalho, basta colocar npm run e o nome do script. <br>
+            <img src="imagem/JavaScript/scripts2.png" alt="">
+        </p>
+
+        <h2>NPX</h2>
+        <p>Serve para executar na linha de comando os pacotes que instalamos, nem todos os pacotes vão ter executaveis, na documentação dos pacotes vai dizer se ele é executavel ou não e quais os comando que podem ser executados. Outra maneira de vermos é asbrindo a pasta node_modules e vamos encontrar uma pasta chamada .bin e dentro dela foi criado um atalho.</p>
+        <p>
+            Para usar basta colocar o npx e o nopme do arquivo, assim como no exemplo abaixo. <br>
+            <img src="imagem/JavaScript/npx.png" alt="">
+
+        </p>
+
+        <h2>Convertendo JSON</h2>   
+        <img src="imagem/JavaScript/json.png" alt="">
+
+        <h2>Babel</h2>
+        <p>Babel é um compliador de JavaScript para JavaScript, ele faz a conversão do codigo atual para versões mais antigas, fazendo assim a aplicação ter mais acessibilidade para outros navegadores.</p>
+        <p>
+            Para instalar o babel, podemos substituir o --save-dev por D e depois passar o nome dos pacotes que vamos precisar depois do @, então vamos instalar o pacote principal, ou seja, o core, e vamos instalar o cli que é a ferramenta de linha de comando e o preset-env vai configurar o babel automaticamente pra gente.
+            <br>
+            <img src="imagem/JavaScript/babel1.png" alt="">
+        </p>
+        <p>
+            Para usar o babel basta inserir o comando como no exemplo, mas ele irá converter esse codigo em uma conversão simples, pois ainda não usamos o preset-env e essa conversão será mostrada no terminal.
+            <br>
+            <img src="imagem/JavaScript/babel2.png" alt="">
+
+        </p>
+        <p>
+            Para criar um arquivo separadamente podemos iserir o comando como no exmeplo abaixo, assim estamos informando que queremos criar um arquivo através do nosso arquivo index.js, passamos o nome do arquivo como dist de distribuição e assim ele cria um arquivo na mesma pasta do nosso arquivo, mas ainda não foi convertido para uma versão amis antiga.
+            <br>
+            <img src="imagem/JavaScript/babel3.png" alt="">
+
+        </p>
+        <p>
+            Para converter basta passarmos o mesmo comando como no exemplo acima e informar que queremos usar o preset, no caso presets no plural, pois pode ser aceito mais de um preset, basta separar por vírgula e devemos informar que tudo isso é igual ao pacote que presents que baixamos. Com isso ele já consegue fazer a conversão automaticamente, mudando por exemplo as variáveis de let e const para var. <br>
+            <img src="imagem/JavaScript/babel4.png" alt="">
+
+        </p>
+        <p>
+            Para facilitar e converter vários arquivos de uma vez, podemos passar o comando... npx babel e o nome da pasta onde estão nossos arquivos --out - dir que é de diretório dist e vamos usar o preset do babel. Assim estamos falando... Pegue todos os arquivos desta pasta e crie uma pasta com o nome de dist e converta usando o preset. Depois disso ele cria uma pasta e converte todos os arquivos que estavam dentro daquela principal pasta. <br>
+            <img src="imagem/JavaScript/babel5.png" alt="">
+
+        </p>
+        <p>
+            Para configurar o babel basta criar um arquivo de configuração com o mesmo nome que está no exemplo. <br>
+            <img src="imagem/JavaScript/babel6.png" alt=""> <br>
+            Então vamos exportar um objeto, e passar como chaves o que deseja configurar, nesse caso o presets, e cria um array e dentro desse array se cria outro array e coloca uma string com o nome do preset, o present funciona dessa forma, para mais configurações é importante olhar na documentação. <br>
+            <img src="imagem/JavaScript/babel7.png" alt="">
+        </p>
+
+        <h2>Webpack</h2>
+        <p>
+            Sua principal função é ler arquivo principal e verificar o que é necessário para funcionar a aplicação, verificando quais dependencias estão sendo usados no projeto e deixando a aplicação estática.
+        </p>
+        <p>
+            Para instalar o webpack é simples, somente siga o exemplo. <br>
+            <img src="imagem/JavaScript/web1.png" alt="">
+            <br>
+            Agora vamos usar um módulo que já conhecemos, o dayjs <br>
+            <img src="imagem/JavaScript/web2.png" alt="">
+            <br>
+            Usamos da seguinte forma. <br>
+            <img src="imagem/JavaScript/web3.png" alt="">
+            <br>
+            Ele comprimiu todo o código em uma unica linha, para deixar mais leve o arquivo, nesse exemplo, no html foi inserido o arquivo main.js mas esse arquivo não foi criado, depois que o webpack foi requerido, ele criou o arquivo main na mesma pasta do html. <br>
+            Ele usa por padrão o modo de produção, que é o produto final, mas ele tem o modo desenvolvimento.        
+
+        </p>
+        <h3>Configurando o webpack</h3>
+        <h4>Entrada</h4>
+        <p>
+            Para consfigurar o webpack é bem parecido com o babel, temos um arquivo padrão que podemos criar, dentro dele vamos criar um objeto chamado entry, e depois vamos indentificar entrada, ou seja, o arquivo principal e vamos fazer isso passando uma chave com o nome desejado e o caminho da nossa entrada. A partir dai ele vai criar um arquivo principal com o nome que nós escolhermos, deixando de usar o nome padrão que é main. <br>
+            <img src="imagem/JavaScript/web4.png" alt=""> <br>
+            <img src="imagem/JavaScript/web5.png" alt="">
+
+        </p>
+        <h4>Mode</h4>
+        <p>
+            Quando modificamos o mode para developers, fica melhor de ser entendido, ele não faz o enpacotamento. <br>
+            <img src="imagem/JavaScript/web6.png" alt="">
+
+        </p>
+        <h4>Saída</h4>
+        <p>
+            Para configurar a saída vamos importar o modulo path. <br>
+            <img src="imagem/JavaScript/web7.png" alt=""> <br>
+            Depois vamos configurar pra nossa saida ir para o caminho que desejamos, evitando assim uma desorganização. vamos usar o path.resolve para ele calcular o caminho absoluto, vapssamos o parametro __dirname para ele buscar o caminho da pasta que estamos e o segundo parametro é o que eu quero incluir no caminho. <br>
+            <img src="imagem/JavaScript/web8.png" alt=""> <br>
+
+            Podemos mudar o nome do arquivo usando o filename, que é muito útil quando temos mais de uma entrada, colocando o [name]. para que ele possa criar mais de um arquivo com nomes diferentes. <br>
+            <img src="imagem/JavaScript/web10.png" alt="">
+        </p>
+
+        <h2>Loaders</h2>
+        <p>Serve para fazer transformações nos modulos.</p>
+        <p>
+            Exemplo de louder que vamos ver é um loader que permite inserir CSS nos modulos de JavaScript, assim o CSS vai estar incluso no arquivo principal. <br>
+            Para instalar é bem simples, basta seguir o comando do exemplo. <br>
+            <img src="imagem/JavaScript/load1.png" alt="">
+        
+        </p>
+        <p>
+            Como os loaders servem para transformar os modulos, vamos no arquivo de configurações e chamar o objeto module, e dentro dele vamos colocar as regras que queremos que ele siga. A primeira propriedade que é a teste, é que diz em que arquivos ele vai executar o loader. A forma de procurar o arquivo no teste é usando expressões regulares, que é um meio de procurar uma string, nesse caso queremos encontrar o .css mas para isso, precisamos colocar a contra barra na frente para que ele posssa ler o ponto e o cifrão no final pra dizer que esta string vai estar no final do arquivo. A segunda propriedade use, serve para dizer qual loader vai ser usado, sendo pasado como string. <br>
+            <img src="imagem/JavaScript/load3.png" alt="">
+
+        </p>
+        <p>
+            Precisamos importar o arquivo css para o JavaScript principal, como no exemplo. <br>
+            <img src="imagem/JavaScript/load2.png" alt=""> <br>
+            E agora basta rodar o webpack da seguinte maneira. <br>
+            <img src="imagem/JavaScript/load4.png" alt="">
+        </p>
+
+        <h2>Plugins</h2>
+        <p>
+            O plugin que vamos ver pega o CSS que está incluso no webpack e gerar um arquivo separado para ele na saída. <br>
+            Para instalar, só usar o comando como no exemplo. <br>
+            <img src="imagem/JavaScript/plug1.png" alt="">
+            <br>
+            Depois importar no arquivo de configuração, desta forma: <br>
+            <img src="imagem/JavaScript/plug2.png" alt="">
+            <br>
+            E incluir no objeto de configuração, passando a palavra new na esquerda e os parenterses como se fosse uma função, depois tiramos o style loader e colocamos no lugar o plugin, que ele vai ser seu próprio loader. <br>
+            <img src="imagem/JavaScript/plug3.png" alt="">
+            <br>
+            Para criar o arquivo basta fazer como nos outros exemplos, só executar o webpack. <br>
+            <img src="imagem/JavaScript/plug4.png" alt="">
+            <br>
+            Depois disso ele vai criar um arquivo index.css separado, na pasta dist para poder inserir no html, lembrando que tem que haver um link css no html. 
+        </p>
+
+
+
+    </main>
+    <h3>Página principal!</h3>
+    <a href="index.html"><img src="imagem/home.png" alt="home"></a>
+</body>
+</html>
