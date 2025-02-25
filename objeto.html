@@ -12,14 +12,85 @@
         <h1>Objetos</h1>
         <h2>Criando Objetos</h2>
         <p>
-            Para criar um objeto é muito simples , é quase como se fossemos criar uma variável, mas usamos as chaves, então se eu quisesse criar um bejeto chamado carro, ficaria assim: <br>
+            Para criar um objeto é muito simples , é quase como se fossemos criar uma variável, mas usamos as chaves, então se eu quisesse criar um objeto chamado carro, ficaria assim: <br>
             <strong>const carro = {}</strong> <br>
-            É comum usarmos consta ao invés de let ou var, dentro das chaves poderiamos passar as propriedades que são variáveis que vão armazenar valores, como já vimos antes.
+            É comum usarmos const ao invés de let ou var, dentro das chaves poderiamos passar as propriedades que são variáveis que vão armazenar valores, passamos a propriedade depois dois ponto e o valor a ser armazenado, podemos armazenar, número, strings, valores boleanos, array  e outro objeto também.
         </p>
-        <p>Para se referir a um objeto dentro dele mesmo usamos a palavra reservada <strong>this</strong>, então para referir a uma propriedade chamada nome dentro do objeto, podemos usar o seguinte comando <strong>this.nome</strong></p>
+        <p>
+            Para referir uma propriedade de um objeto basta chamar o objeto depois colocar um ponto e então o nome da propriedade, se eu tenho um objeto chamado carro e tenho uma propriedade marca, para chamar eu faria da seguinte forma... <strong>carro.marca</strong>
+            <br>        
+            Para se referir a um objeto dentro dele mesmo usamos a palavra reservada <strong>this</strong>, então para referir a uma propriedade chamada nome dentro do objeto, podemos usar o seguinte comando <strong>this.nome</strong>
+        </p>
 
         <h2>Métodos</h2>
-        <p>Métodos são funções dentro de um objeto.</p>
+        <p>
+            Métodos são funções dentro de um objeto, vou deixar abaixo um exemplo de método. <br>
+            <img src="imagem/JavaScript/methodo.png" alt=""> <br>
+            O addOnStock é um método, que soma o valor passado ao stock já registrado. <br>
+            Podemos adicionar funções dinamicamente assim: <br>
+            <img src="imagem/JavaScript/methodo2.png" alt=""> <br>
+            
+        </p>
+        
+        <h2>Função Construtoras</h2>
+        <p>
+            São funções que servem para criar objetos, devem ser escritas em PascalCase, ou seja, com a primeira letra maiúscula e a outra palavra maiúscula também. <br>
+            Exemplo de Função contrutora.. <br>
+            <img src="imagem/JavaScript/methodo3.png" alt=""> <br>
+            Para chamar basta acrescentar a palavra new antes de chamar a função normalmente. <br>
+            <img src="imagem/JavaScript/methodo4.png" alt=""> <br>
+        </p>
+
+        <h2>Classes e Instância</h2>
+        <p>Uma classe nada mais é do que uma função construtora, ou seja, usada para criar objetos. Para criar uma classe usamos a palavra reservada class damos um nome e dentro da class usamos o método contructor para dizer os atributos que temos que usar nas instâncias. o this no caso das class é usado para refenciar as instacias e não as classes.</p>
+        <img src="imagem/JavaScript/class1.png" alt="">
+
+        <p>Uma instância é como chamados uma class, nesse exemplo o eragon é uma instância da classe Book.</p>
+        <p>
+            Para criar métodos com as class é bem simples, basta inserir uma função dentro da class e fora do constructor. <br>
+            <img src="imagem/JavaScript/class2.png" alt="">
+            <br>
+            Para chamar, é quase como uma função normal, mas passando o instancia e não a class. <br>
+            <img src="imagem/JavaScript/class3.png" alt="">
+
+        </p>
+        <p>
+            Temos o método instanceof que serve para saber se aquele objeto é uma instacia daquela class. <br>
+            <img src="imagem/JavaScript/class4.png" alt="">
+            <br>
+            E temos o retorno em valor booleano. <br>
+            <img src="imagem/JavaScript/class5.png" alt="">
+
+        </p>
+
+        <h2>Associação</h2>
+        <p>
+            Para associoar uma class a outra é muito simples, vou deixar um exemplo bem fácil de seguir. <br>
+            Primeiro, criamos a class Person. <br>
+            <img src="imagem/JavaScript/ass1.png" alt="">
+            <br>
+            Depois criamos a class Adress. <br>
+            <img src="imagem/JavaScript/ass2.png" alt="" class="mdq">
+            <br>
+            Exportamos as duas classes para um arquivo index, assim podemos associar uma class na outra. <br>
+            <img src="imagem/JavaScript/ass3.png" alt="" class="mdq">
+            
+        </p>
+        
+        <h3>Outra maneira</h3>
+        <p>
+            Outra maneira de associar seria passar a class Adress diratamente na class Person. <br>
+            <img src="imagem/JavaScript/ass4.png" alt="" class="mdq">
+            <br>
+            E para chamar a class Person teriamos que chamar já passando os parametros do adress também. <br>
+            <img src="imagem/JavaScript/ass5.png" alt="" class="mdq">
+            <br>
+            A diferença seria que a classe Person não funcionaria sem a class Adress.
+            
+        </p>
+
+
+
     </main>
     <h3>Página principal!</h3>
     <a href="index.html"><img src="imagem/home.png" alt="home"></a>

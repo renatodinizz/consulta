@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outros</title>
+    <title>NPM - Babel - Webpack</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="imagem/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <main>
+        <h1>
+            NPM - Babel - Webpack
+        </h1>
         <h2>NPM - Node Package Manager</h2>
         <p>Um gerenciador de pacotes que serve para compartilhar, baixar e gerenciar os modulos.</p>
         <h3>Selecionar a pasta e inicializar</h3>
@@ -160,6 +163,10 @@
             <img src="imagem/JavaScript/web10.png" alt="">
         </p>
 
+        <h3>Usando o babel com o webpack</h3>
+        <p>Para integrar e não precisar fazer o procedimento no babel e depois passar tudo para o webpack, podemos usar o babel direto no webpack, utilizando o loader dele, <strong>babel-loader</strong>, assim encurtamos esse processo. Para isso basta instalar o babel loader e depois ir nas configurações do webpack e configurar o loader.</p>
+        <img src="imagem/JavaScript/babel-web.png" alt="">
+
         <h2>Loaders</h2>
         <p>Serve para fazer transformações nos modulos.</p>
         <p>
@@ -196,6 +203,20 @@
             <img src="imagem/JavaScript/plug4.png" alt="">
             <br>
             Depois disso ele vai criar um arquivo index.css separado, na pasta dist para poder inserir no html, lembrando que tem que haver um link css no html. 
+        </p>
+        <h2>Webpack-dev-server</h2>
+        <p>Atua como um servidor para rodar as aplicações, assim como o live server, uma vantagem é que se atualizarmos o codigo, ele já salva e roda automaticamente sem precisar encapsular novamente com o webpack.</p>
+        <p>
+            Para instalar basta seguir o comando do exemplo. <br>
+            <img src="imagem/JavaScript/server1.png" alt="">
+            <br>
+            Mas precisamos fazer uuma configuração para que ele possa rodar na porta correta, precisamos novamente importar o path, e passar o caminho do nosso diretório estático, o compress true significa que ele vai comprimir como se fosse um arquivo rar ou zip e a port é onde podemos escolher que porta vamos usar nop servidor. <br>
+            <img src="imagem/JavaScript/server2.png" alt="">
+            <br>
+            E quando rodarmos o comando ele vai rodar junto o webpack e para rodar esser servidor usamos o seguinte comando: <br>
+            <img src="imagem/JavaScript/server3.png" alt="">
+            <br>
+            Depois disso ele vai mostrar a porta que podemos acssar e até mesmo ele vai nos mostrar um link.
         </p>
 
 
