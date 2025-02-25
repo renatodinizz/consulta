@@ -63,7 +63,7 @@
 
         </p>
 
-        <h2>Associação</h2>
+        <h2>Associação entre Classes</h2>
         <p>
             Para associoar uma class a outra é muito simples, vou deixar um exemplo bem fácil de seguir. <br>
             Primeiro, criamos a class Person. <br>
@@ -77,7 +77,7 @@
             
         </p>
         
-        <h3>Outra maneira</h3>
+        <h3>Outra maneira de fazer Associação</h3>
         <p>
             Outra maneira de associar seria passar a class Adress diratamente na class Person. <br>
             <img src="imagem/JavaScript/ass4.png" alt="" class="mdq">
@@ -85,8 +85,52 @@
             E para chamar a class Person teriamos que chamar já passando os parametros do adress também. <br>
             <img src="imagem/JavaScript/ass5.png" alt="" class="mdq">
             <br>
-            A diferença seria que a classe Person não funcionaria sem a class Adress.
+            A diferença seria que a classe Person não funcionaria sem a class Adress.            
+        </p>
+
+        <h2>Encapsulamento</h2>
+        <p>Temos dois tipos de encapsulamento, o public que é o padrão e o privado, o privado não pode ser acessado fora da classe, isso é útil quando queremos que aquele valor ou um método não seja alterado por nenhum desenvolvedor.</p>
+
+        <p>
+            Tudo o que precisamos fazer é usar um # no começo do nome do atributo. Devemos declarar quais atributos vão ser privado, podemos fazer isso declarando antes do constructor, como na imagem abaixo. <br>
+            <img src="imagem/JavaScript/encp1.png" alt=""> <br>            
+            E quando for referenciar, devemos fazer com o #. Cuidado ao tentar chamar o atributo sem passar a # fora da classe, que nesse caso você não estaria chamando esse atributo, mas sim criando um novo.<br>
+            <img src="imagem/JavaScript/encp2.png" alt=""> <br>          
             
+            Abstrair no caso das classes significa tirar, ocutar. Podemos fazer isso para que o código fique mais simples e a outra parte não seja alterada. No exemplo abaixo vamos privar um método que faz a autentificação de email e senha, e retorna um valor booleano. <br>
+            <img src="imagem/JavaScript/encp3.png" alt=""> <br>
+            Agora vamos acrescentar esse método privado em outro método, que irá retorna dependendo do que o nosso método privado retornar. <br>
+            <img src="imagem/JavaScript/encp4.png" alt=""> <br>
+            Se tentarmos chamar o método privado, vai aparecer uma mensagem de erro dizendo que não é possível acessar fora da classe. <br>
+            <img src="imagem/JavaScript/encp5.png" alt="" class="mdq">
+        </p>
+
+        <h2>Herança</h2>
+        <p>
+            Recurso que permite criar classe que herdam outra classe, a classe herdada chamamos de clase mãe ou superclass já a classe que herda chamamos de classe filha ou subclass. Uma classe flha possui todos os atributos e métodos da classe mãe, mas pode ter seus próprios atributos e métodos. 
+        </p>
+        <p>
+            Agora vamos ver um exemplo de como isso tudo funciona, temos uma class que será a class mãe chamada de property, que tem uma area e um preço como atributos e um método para calcular a area pelo preço. <br>
+            <img src="imagem/JavaScript/her1.png" alt="">
+            <br>
+            Para outra classe herdar a class property basta usar a palavra extends e referenciar a class mãe, assim estamos falando que a classe house é uma extensão da class property. <br>
+            <img src="imagem/JavaScript/her2.png" alt="">
+            <br>
+            Para instanciar podemos chamar em uma variável como antes e passar os atributos, neste exemplo criamos uma instancia com a clss mãe e outra com a class filha. <br>
+            <img src="imagem/JavaScript/her3.png" alt="">
+            <br>
+            Podemos usar o instanceof para saber se uma class é filha de outra. <br>
+            <img src="imagem/JavaScript/her4.png" alt="">
+            <br>
+            Para criar uma class que agora herda atributos e métodos da class mãe, mas tenha também seus próprios métodos e atributos. Para isso temos que chamar o construtor da class mãe com a palavra reservada super, passar os parametros que temos na outra class e depois sim passar nosso construtor. <br>
+            <img src="imagem/JavaScript/her5.png" alt="">
+            <br>
+            E quando formos instaciar essa class, vamos ver temos que passar os dois atributos herdados e o atributo exclusivo dela. <br>
+            <img src="imagem/JavaScript/her6.png" alt="">
+            <br>
+            Lembrando que podemos usar os métodos que estão na class que ela herdou, como nesse exemplo a classe property. <br>
+            <img src="imagem/JavaScript/her7.png" alt="">
+
         </p>
 
 
