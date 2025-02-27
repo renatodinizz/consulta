@@ -145,7 +145,49 @@
             <img src="imagem/JavaScript/poli4.png" alt=""> <br>
             Ou seja, ele nãso executou o método do classe mãe, mas sobrescreveu.
         </p>
+        
+        <h2>Acessadores: Get e Set</h2>
+        <p>Podemos utlizar para proteger os atributos privados ou usa-los para modificar o comportamento de atribuição e leitura. A diferença para os métodos tradicionais é que conseguimos manipula-los como se fosse um atributo.</p>
 
+        <h3>Get</h3>
+        <p>
+            Utilizado muito para leitura de uma atributo privado, como: <br>
+            <img src="imagem/JavaScript/get1.png" alt=""> <br>
+            Para utilizar basta usar a palavra reservada get dar um espaço e agir como se fosse um método. Nesse exemplo atribuimos um valor fixo para o amount, então chamamos ele com o get para que ele possa ser lido.<br>
+            <img src="imagem/JavaScript/get7.png" alt=""> <br>
+            E podemos chamar, sem passar os parenteses como nos métodos, assim como no exemplo: <br>
+            <img src="imagem/JavaScript/get4.png" alt=""> <br>
+        </p>
+        
+        <h3>Set</h3>
+        <p>
+            Para usarmos o set precisamos usar a palavra reservada set dar um espaço nomear então passar um atributo que nesse caso é o mome que quermos atribuir ao this.#username, lembrando que usamos o #username que além dele ser um atributo privado, se não fizessemos isso, o set entraria num loop infinito até dar erro. <br>
+            <img src="imagem/JavaScript/get2.png" alt=""> <br>
+            Podemos usar o método get logo depois do set, é um comportamento sempre usado. <br>
+            <img src="imagem/JavaScript/get3.png" alt=""> <br>
+            E para atribuir um valor e chama-lo podemos fazer somente usando pontos sem parenteses, da seguinte forma. <br>
+            <img src="imagem/JavaScript/get5.png" alt=""> <br>
+            Podemos também fazer uma vadição para saber se o valor a ser inserido é uma string ou não, como vemos no exemplo abaixo. <br>
+            <img src="imagem/JavaScript/get6.png" alt=""> <br>
+        </p>
+
+        <h2>Atributos e Métodos Estáticos</h2>
+        <p>
+            São tributos que não dependem de uma instacia para serem chamados,  podem ser chamados diretamente pelas classes. <br>
+            Aplicação: Um valor global que queremos que seja usado em todas as instancias eo seu valor seja o mesmo para todas as instancias. Outra aplicação seria uma classe de modelo para uma tabela em banco de dados onde um método seja carregado mesmo que nenhuma instancia tenha sido carregada ainda.
+        </p>
+        <p>
+            Para usar basta colocar a palavra reservada static e aquele atributo se torna estatico, nesse exemplo o atributo estatico é a taxa de diária de um hotel. Para chamar não usamos mais a palavra this. mas sim o nome da classe ponto e o nosso atributo estatico.<br>
+            <img src="imagem/JavaScript/static1.png" alt=""> <br>
+            Podemos também usar métodos estaticos, basta colocar a palavra static antes do método. <br>
+            <img src="imagem/JavaScript/static2.png" alt=""> <br>
+            Para usar basta instanciar uma classe normalmente. <br>
+            <img src="imagem/JavaScript/static3.png" alt=""> <br>
+            Aqui vemos que nos retorna, ele retornou o calculando o baseFee. <br>
+            <img src="imagem/JavaScript/static4.png" alt=""> <br>
+            Podemos também usar o get junto com o static, assim podemos deixar o get para atribuiro um novo valor para nosso atributo estatico. <br>
+            <img src="imagem/JavaScript/static5.png" alt=""> <br>
+        </p>
 
 
     </main>
