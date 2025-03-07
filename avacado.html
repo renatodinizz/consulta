@@ -68,6 +68,46 @@
             <li>Insentive(i) - utilizada para não diferenciar maúsculas e minúsculas..</li>
             <li>Multi Line(m) - utilizada para capturar o inicio e o final de cada linha.</li>            
         </ul>
+
+        <h2>SetTimeout</h2>
+        <p>
+            Usado para servir como um temporizador, para se fazer algo depois de um tempo. Usamos a palavra reservada setTimeout e ela pede uma função como primeiro parametro, o segundo paramentro é o tempo que vai demorar para fazer aquela ação, lembrando que o tempo é em milisegundos, nesse caso estamos usando mil milisegundos(que é o mesmo que 1 segundo) e multiplicamos por três (3 segundos). <br>
+            <img src="imagem/JavaScript/set1.png" class="mdq" alt="">
+            <br>
+            Podemos também armazenar o setTimeout em uma variável, para que ele retorne e assim usarmos outra função a clearTimeout que serve para limpar a função, ou seja, pular o setTimeout. <br>
+            <img src="imagem/JavaScript/set2.png" class="mdq" alt="">         
+        </p>
+
+        <h2>SetInterval</h2>
+        <p>
+            Muito parecido com o setTimeout, mas o que o diferencia é que ele repete várias vezes, aqui ele vai esperar o tempo e excutar novamente. <br>
+            <img src="imagem/JavaScript/set3.png" alt=""> <br>
+            Podemos também armazenar o setInterval em uma variável, para que ele retorne e assim usarmos outra função a clearInterval que serve para parar ou controlar a execução do setInterval.<br>
+            <img src="imagem/JavaScript/set4.png" alt="">
+        </p>
+
+        <h2>Promises</h2>
+        <p>
+            Uma promise é um objeto que tem associada a ele uma função que é executada de forma asincrona e devolve um valor para que possamos trabalhar com esse resultado. Tem como status pending que é pendente, resolved que é uma promise que foi executada e teve sucesso e rejected que foi executada e teve não teve sucesso. Usamos o parametro resolve para retornar algo. <br>
+            <img src="imagem/JavaScript/then1.png" alt=""> <br>
+            Podemos usar também o parâmetro de rejected para mostrar um erro que pode ocasionar no código. <br>
+            <img src="imagem/JavaScript/then2.png" alt=""> <br>
+            A forma mais comum de se trabalhar com as promises retornando de uma função por que assim conseguimos controlar quando estamos chamando essa promise. <br>
+            <img src="imagem/JavaScript/then3.png" alt="">
+        </p>
+
+        <h3>Métodos then e catch</h3>
+        <p>
+            O then serve para lhe darmos com uma promise e já resolvida, dentro do then usamos uma função de callback, ela vai receber como parâmetro nosso resultado o resultado da promise, ou seja, o Resolve. <br>
+            <img src="imagem/JavaScript/then4.png" alt=""><br>
+            O catch é utilizado para tratar os erros da promise. A forma mais comum de vê a utilidade do catch é logo após usar o then, por que o then retorna o valor da promise. O catch também tem uma função de callback mas também tem um parâmetro que é o motivo do erro. <br>
+            Nossa promise. <br>
+            <img src="imagem/JavaScript/then6.png" alt=""> <br>
+            O método catch. <br>
+            <img src="imagem/JavaScript/then5.png" alt=""> <br>
+            O finally somente vai ser executado quando a promise se for finalizada, lembrando que ele não tem parâmetro. A forma mais correta de se ver a utilização de um then-catch é logo após a execução de uma função, encadeando ume método após o outro. <br>
+            <img src="imagem/JavaScript/then7.png" alt="">
+        </p>
         
 
 
