@@ -108,6 +108,80 @@
             O finally somente vai ser executado quando a promise se for finalizada, lembrando que ele não tem parâmetro. A forma mais correta de se ver a utilização de um then-catch é logo após a execução de uma função, encadeando ume método após o outro. <br>
             <img src="imagem/JavaScript/then7.png" alt="">
         </p>
+
+        <h3>Encadeando Promises</h3>
+        <p>
+            Precisamos encadear promises, quando queremos que o return de uma promise seja necessário para outra, para isso é extremamente necessário que usemos o return, vamos ver como funciona com um exemplo abaixo. <br>
+            Aqui temos uma função que retonar uma promise, que recebe uma idade e verifica se é maior de idade ou não. <br>
+            <img src="imagem/JavaScript/prom1.png" alt=""> <br>
+            Aqui temos uma função que retonar uma promise, que recebe uma data de aniversário e calcula quantos anos essa pessoa tem.<br>
+            <img src="imagem/JavaScript/prom2.png" alt=""> <br>
+            Aqui chamamos a primeira função e passamos uma data de anivresário, chamamos o then e dentro do then chamamos a função que calcula a idade, é como se o then da primeira função fosse somente para chamar a outra função e depois disso chamamos o then da segunda função, e como o reject das duas funções é o mesmo, fechamos com apenas um catch.
+            <br>
+            <img src="imagem/JavaScript/prom3.png" alt="">
+        </p>
+        
+        <h3>Executando Várias Promises</h3>
+        <p>
+            Podemos executar várias promises de uma só vez e para isso vamos usar entender com o exemplo abaixo. <br>
+            Temos duas funções simples, uma que calcula a soma de dois númeors e outra que subtrai dois números, chamamos essas funções dentro de variáveis. <br>
+            <img src="imagem/JavaScript/prom4.png" alt=""> <br>
+            E para executarmos todas de uma vez usamos o Pormise.all que pede um array e nesse caso passamos as duas variáveis como um array, depois usamos o then e o catch, como uma promise normal, Nesse exmplo só irá retonar se as duas promises forem resolvidas. <br>
+            <img src="imagem/JavaScript/prom5.png" alt=""> <br>
+            Nesse outro exemplo, temos um array de números, uma função para calcular a potência de um número e passamos a função map que retorna um array, e passamos a promise como uma função de callback. <br>
+            <img src="imagem/JavaScript/prom6.png" alt="" class="mdq"> <br>            
+        </p>
+        
+        <h3>Funções Async</h3>
+        <p>
+            Podemos declarar promises de uma fomra bem mais simples, que são as funções asyncronas. <br>
+            Antes para trabalhar com uma promise teriamos que criar uma função que retona uma promise, vamos ver um exemplo de uma promise que soma dois numeros e vamos transforma la em uma função asyncrona, promise original: <br>
+            <img src="imagem/JavaScript/prom7.png" alt="" class="mdq"> <br>   
+            Para transforma la em asyncrona basta colocar a palavra reservada async antes da função, e o return será o mesmo que o resolve. <br>         
+            <img src="imagem/JavaScript/prom8.png" alt="" class="mdq"> <br>  
+            E para rejeitar, fizemos uma verificação e usamos o Promise.reject <br>       
+            <img src="imagem/JavaScript/prom9.png" alt="" class="mdq"> <br>            
+        </p>
+        
+        <h3>Await</h3>
+        <p>
+            Para utilizarmos o await precisamos entender que ele só funcionará dentro de funções asyncronas e que ele trava o nosso código, diferente de se usarsemos o then, tudo depois do then pode ser executado enquanto o then está sendo resolvido, mas com o await não, tudo depois dele fica esperando a resolução do await. <br>
+            Antes para chamar uma função asyncrona, chamavamos dessas forma: <br>
+            <img src="imagem/JavaScript/prom12.png" alt=""> <br>
+            Com o await, podemos chamar dessa fomra: <br>
+            <img src="imagem/JavaScript/prom11.png" alt=""> <br>
+            E para tratar os erros, podemos usar o try catch normal, dessa forma: <br>
+            <img src="imagem/JavaScript/prom10.png" alt=""> <br>
+        </p>
+        
+        <h3>Promise.all com async e await</h3>
+        <p>
+            Criamos um array de números, inserimos o método map, com uma função asyncrona que chama uma função que espera 2 segundos e então retorna o calculo do número * número, mas o problema que o console não consegue ler os resultados, por quue deesa maneira, seria como pedissemos para ele ler várias promises e desse modo ele não consegue fazer.
+            <br>
+            <img src="imagem/JavaScript/prom13.png" alt=""> <br>
+            Para ler cada resultado precisamos usar o promise.all, pois cada número do array se tornou uma promise, depois basta passar o método then como vimos antes.
+            <br>
+            <img src="imagem/JavaScript/prom14.png" alt=""> <br>
+            Uma outra maneira de fazermos isso é criando uma função asyncrona e passando o método map para dentro do promise.all
+            <img src="imagem/JavaScript/prom15.png" alt=""> <br>
+        </p>
+
+        <h2>Requisição GET</h2>
+        <p>
+            Podemos fazer requisições de APIs da seguinte forma: Dentro de uma async function importamos a API desejada pelo método fetch, passando uma string que será a url desejada. Depois convertemos ela para o formato JSON, onde o JavaScriptpode entender. <br>
+            <img src="imagem/JavaScript/get9.png" alt=""> <br>
+            Se dermos um console podemos ver que ele retorna um objeto, com infomrações como o corpo da requisição, os cabeçalhos, o ok que mostra se foi bem sucedida, o status, a url que foi requisitada e outras informações. <br>
+            <img src="imagem/JavaScript/get8.png" alt=""> <br>
+            Depois podemos trabalhar com essa API de maneira similar como já vimos antes, como no exemplo abaixo: <br>
+            <img src="imagem/JavaScript/get10.png" alt=""> <br>
+            Neste exemplo, pegamos para cada um dos objetos que importamos e como função de callback usamos a função que insere algumas informações em um card. <br>
+            <img src="imagem/JavaScript/get11.png" alt="">
+        </p>
+
+        <h2>Requisição POST</h2>
+        <p>
+            
+        </p>
         
 
 
